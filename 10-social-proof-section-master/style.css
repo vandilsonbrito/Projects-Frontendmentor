@@ -1,0 +1,665 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 56%, 59%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    user-select: none;   
+}
+.background_pattern-top {
+    width: 600px;
+    height: 400px;
+    background: url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -10%;
+    left: -8%;
+}
+.background_pattern-bottom {
+    width: 950px;
+    height: 500px;
+    background: url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5%;
+    left: 15%;   
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 50px 70px;
+    font-family: 'League Spartan', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "info_about star_reviews" "container_feedback";
+}
+
+.info_about {
+    display: flex;
+    flex-direction: column;
+
+}
+.info_about h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-right: 150px;
+    color: var(--Very-Dark-Magenta);
+}
+.info_about p {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-right: 150px;
+    line-height: 1.2rem;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.stars_reviews {
+    margin-left: -50px;
+}
+.review1, .review2, .review3 {
+    width: 350px;
+    height: 52px;
+    border-radius: 7px;
+    background-color: var(--Light-Grayish-Magenta);
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+.review1 {
+    margin-top: 30px;
+}
+.review2 {
+    margin-left: 50px;
+}
+.review3 {
+    margin-left: 100px;
+}
+.review1 p, .review2 p, .review3 p {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--Very-Dark-Magenta);
+    margin-left: 30px;
+}
+.stars {
+    display: flex;
+    gap: 8px;
+    margin-left: 30px;
+} 
+
+.container_feedback {
+    margin-top: -20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex; 
+} 
+
+.feedback1, .feedback2, .feedback3 {
+    box-sizing: border-box;
+    max-width: 26.5%;
+    max-height: 70%;
+    border-radius: 10px;
+    background-color: var(--Very-Dark-Magenta);
+    margin-left: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.feedback1 {
+    margin-left: 0px;
+}
+.feedback2 {
+    margin-top: 15px;
+}
+.feedback3 {
+    margin-top: 30px;
+}
+
+.perfil_picture {
+    width: 34px;
+    border-radius: 100%;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+.people_name {
+    color: white;
+    position: relative;
+    top: -35px;
+    left: 62px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.verified {
+    color: var(--Soft-Pink);
+    position: relative;
+    top: -29px;
+    left: 62px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.feedback {
+    color: white;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1.35rem;
+    margin: -10px 10px 0 10px;
+} 
+
+
+/* Differents screens*/
+@media (max-width: 980px) {
+    .background_pattern-bottom {
+        display: none;
+    }
+    main {
+        box-sizing: border-box;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        /* padding: 60px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info_about h1 {
+        font-weight: 700;
+        font-size: 3.5rem;
+        
+    }
+    .info_about p {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+        margin-top: 30px;
+        line-height: 1.3rem;
+        color: var(--Dark-Grayish-Magenta);
+    }
+    .stars_reviews {
+        max-width: 450px;
+        max-height: 250px;
+        margin-left: -50px;
+    }
+
+    .container_feedback {
+        margin-top: 50px;
+        margin-left: -20px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    } 
+    .feedback1, .feedback2, .feedback3 {
+        box-sizing: border-box;
+        min-width: 27.5%;
+        max-height: 90%;
+    }
+    .perfil_picture {
+        width: 30px;
+        border-radius: 100%;
+        position: relative;
+        top: -5px;
+        left: 10px;
+    }
+    .people_name {
+        top: -36px;
+        left: 55px;
+        font-size: 0.8rem;
+    }
+    .verified {
+        top: -31px;
+        left: 55px;
+        font-size: 0.8rem;
+    }
+    .feedback {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        margin: -10px 0px 5px 0px;
+        text-align: start;
+    } 
+}
+
+@media (max-width: 700px) {
+    :root{
+        box-sizing: border-box;
+    }
+    .background_pattern-top {
+        width: 100%;
+    }
+    .background_pattern-bottom {
+        display: none;
+    }
+    main {
+        max-width: 375px;
+        height: 100rem;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    .info_about h1 {
+        margin: 20px;
+        margin-top: 50px;
+        letter-spacing: -0.1rem;
+        font-size: 2.6rem;
+        text-align: center;
+
+    }
+    .info_about p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 15px 0 0 0;
+        line-height: 1.3rem;
+    }
+    .stars_reviews {
+        width: 350px;
+        height: 300px;
+        max-height: 700px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .review1, .review2, .review3 {
+        width: 100%;
+        height: 80px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .container_feedback {
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    .feedback1, .feedback2, .feedback3 {
+        box-sizing: border-box;
+        min-width: 100%;
+        height: 220px;
+        margin: 30px 0 0 0;
+        padding: 0;
+        
+    }
+    .perfil_picture {
+        width: 30px;
+        border-radius: 100%;
+        position: relative;
+        top: 30px;
+        left: 40px;
+    }
+    .people_name {
+        top: 0px;
+        left: 90px;
+        font-size: 0.8rem;
+    }
+    .verified {
+        top: 4px;
+        left: 90px;
+        font-size: 0.8rem;
+    }
+    .feedback {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        margin-top: 10px;
+        padding: 30px;
+        text-align: start;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/*
+.wrap {
+    display: flex;
+    gap: 140px;
+}
+
+
+
+
+.container_feedback {
+    display: flex;
+    margin-top: 5px;
+}
+*/
+
+
+/* different screens*/
+/* @media (max-width: 1260px) { 
+    main {
+        padding: 60px 60px;
+    }
+    .info_about h1 {
+        font-size: 2.8rem;
+    }
+    .info_about p {
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+    .feedback1, .feedback2, .feedback3 {
+        padding: 20px;
+    }
+    
+}
+
+@media (max-width: 1170px) { 
+    .info_about h1 {
+        font-size: 2.6rem;
+    }
+    .info_about p {
+        font-size: 0.9rem;
+        margin-top: 30px;
+    }
+    .wrap {
+        gap: 40px;
+    }
+    .feedback1, .feedback2, .feedback3 {
+        padding: 15px;
+    }
+    .people_name {
+        font-size: 0.96rem;
+    }
+    .verified {
+        font-size: 0.96rem;
+    }
+    .feedback {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .background_pattern-up {
+        position: relative;
+        left: 150px;
+    
+    }
+    .background_pattern-bottom {
+
+    } 
+    body {
+        overflow: hidden;
+    } 
+    main {
+        top: 0px;
+        padding: 30px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info_about {
+        width: 600px;
+        height: 260px;
+    }
+    .info_about h1 {
+        font-size: 4.1rem;
+    }
+    .info_about p {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        margin-top: 40px;
+    }
+    .wrap {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .review1, .review2, .review3 {
+        width: 400px;
+        height: 55px;
+    }
+    .review1 p, .review2 p, .review3 p {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+    .stars_reviews {
+        margin: 0px;
+    }
+    .review2 {
+        margin-left: 90px;
+    }
+    .review3 {
+        margin-left: 180px;
+    }
+
+    .container_feedback {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .feedback1, .feedback2, .feedback3 {
+        width: 440px;
+        height: 170px;
+        padding: 18px;
+    }
+    .people_name {
+        font-size: 0.9rem;
+    }
+    .verified {
+        font-size: 0.9rem;
+    }
+    .feedback {
+        color: white;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        margin-right: 10px;
+        margin-left: 12px;
+    }
+    .feedback1 {
+        margin: 40px 0px 0px -10px;
+    }
+    .feedback2 {
+        margin: 15px 0px 0px 140px;
+    }
+    .feedback3 {
+        margin: 15px 0px 0px 20px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    main {
+        top: 0px;
+    }
+    .info_about h1 {
+        font-size: 3.9rem;
+    }
+    .info_about p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-top: 40px;
+    }
+    .stars_reviews {
+        margin-top: -10px;
+    }
+
+    .container_feedback{
+        flex-direction: column;
+    }
+    .feedback1, .feedback2, .feedback3 {
+        width: 250px;
+        height: 220px;
+        padding: 15px;
+    }
+    .perfil_picture {
+        margin-left: 10px;
+    }
+    .people_name {
+        font-size: 0.9rem;
+    }
+    .verified {
+        font-size: 0.9rem;
+    }
+    .feedback {
+        color: white;
+        font-weight: normal;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        margin-right: 10px;
+        margin-left: 12px;
+    }
+    .feedback1 {
+        position: relative;
+        top: -10px;
+        left: -70px;
+    }
+    .feedback2 {
+        position: relative;
+        top: -150px;
+        left: 70px;
+    }
+    .feedback3 {
+        position: relative;
+        top: -250px;
+        left: -70px;
+    }
+}
+
+
+@media (max-width: 628px) {
+    main {
+        width: 90%;
+        height: 100%;
+        padding: 0px;
+        padding-top: 20px;
+        position: unset;
+        display: flexbox;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info_about {
+        width: 330px;
+        height: 260px;
+        margin-top: 0px;
+    }
+    .info_about h1 {
+        font-size: 2.7rem;
+        letter-spacing: -0.1rem;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .info_about p {
+        font-size: 1.1rem;
+        line-height: 2rem;
+        margin-top: 30px;
+        margin-left: 10px;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+    .stars_reviews {
+        width: 350px;
+        height: 280px;
+        margin-top: -10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .review1, .review2, .review3 {
+        width: 340px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .review1 {
+        left: 17px;
+    }
+    .review2 {
+        top: 385px;
+        left: -72px;
+    }
+    .review3 {
+        top: 475px;
+        left: -162px;
+    }
+    .review1 p, .review2 p, .review3 p {
+        font-size: 0.95rem;
+        margin-top: 15px;
+    }
+    .container_feedback{
+        width: 340px;
+        height: 400px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .feedback1, .feedback2, .feedback3 {
+        width: 320px;
+        height: 220px;
+        padding: 15px;
+        
+    }
+    .perfil_picture {
+        margin-left: 10px;
+    }
+    .people_name {
+        font-size: 0.9rem;
+    }
+    .verified {
+        font-size: 0.9rem;
+    }
+    .feedback {
+        color: white;
+        font-weight: normal;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        margin-right: 10px;
+        margin-left: 12px;
+    }
+    .feedback1 {
+     
+    }
+    .feedback2 {
+     
+    }
+    .feedback3 {
+    
+    }
+} */
