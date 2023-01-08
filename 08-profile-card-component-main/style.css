@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Dark-cyan);
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 0;
+}
+.bg_top {
+    position: absolute;
+    top: -550px;
+    left: -300px;
+    z-index: 0;
+}
+.bg_bottom {
+    position: absolute;
+    top: 300px;
+    left: 680px;
+    z-index: 0;
+}
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.card {
+    width: 350px;
+    height: 370px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    z-index: 2;
+    
+}
+.img_back_perfil {
+    width: 100%;
+    height: 40%;
+    background: url(images/bg-pattern-card.svg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0 ;
+}
+.img_perfil {
+    width: 92px;
+    height: 95px;
+    background: url(images/image-victor.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    left: 126px;
+    border: 5px solid white;
+
+}
+.info_person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -35px;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+.age {
+    font-weight: normal;
+    color: var(--Dark-grayish-blue);
+    margin-left: 5px;
+}
+.place {
+    font-weight: normal;
+    color: var(--Dark-grayish-blue);
+    font-size: 0.8rem;
+    margin-top: 8px;
+}
+
+.dividing_line {
+    width: 99.5%;
+    border: 1px solid;
+    color: hsl(0, 1%, 83%);
+    margin-top: 25px;
+}
+
+.numbers_info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.followers, .likes, .photos {
+    text-align: center;
+}
+.followers span, .likes span, .photos span {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+.followers p, .likes p, .photos p {
+    font-weight: normal;
+    font-size: 0.6rem;
+    color: var(--Dark-grayish-blue);
+    margin-top: 5px;
+    letter-spacing: 0.08rem;
+}
+
+/* Mobile screen*/
+@media (max-width: 900px) {
+    body {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .bg_bottom, .bg_top {
+        transform: scale(0.8);
+        position: absolute;
+        left: -300px;
+    }
+    .bg_bottom {
+        top: 500px;
+    }
+    .img_back_perfil { 
+        border-radius: 30px 30px 0 0;
+    }
+    .card {
+        /* position: absolute;
+        top: 125%;
+        left: 125%;
+        transform: translate(-50%, -50%); */
+        width: 520;
+        height: 650;
+        border-radius: 30px;
+    }
+    .img_perfil {
+        width: 110px;
+        height: 115px;
+        position: relative;
+        top: -60px;
+        left: 122px;
+        border: 5px solid white;
+    }
+    .info_person {
+        margin-top: -45px;
+        font-size: 1.3rem;
+    }
+    .numbers_info {
+        margin-top: 5px;
+        box-sizing: border-box;
+        padding: 10px 20px 20px 20px;
+    }
+    .place {
+        margin-top: 10px;
+        font-size: 0.95rem;
+    }
+    .dividing_line {
+        margin-top:20px;
+    }
+    .followers span, .likes span, .photos span {
+        font-size: 1.3rem;
+        
+    }
+    .followers p, .likes p, .photos p {
+        font-weight: normal;
+        font-size: 0.7rem;
+        color: var(--Dark-grayish-blue);
+        margin-top: 5px;
+        letter-spacing: 0.08rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .bg_bottom, .bg_top {
+        transform: scale(0.5);
+        position: absolute;
+        left: -300px;
+    
+    }
+}

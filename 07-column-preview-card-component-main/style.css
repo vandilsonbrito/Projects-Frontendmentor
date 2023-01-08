@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 70vw;
+    height: 75vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'card_sedan card_suv card_luxury';
+}
+
+.card_sedan {
+    background-color: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.card_suv {
+    background-color: var(--Dark-cyan);
+    
+}
+
+.card_luxury {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+.card_sedan, .card_suv, .card_luxury {
+    padding: 60px;
+    box-sizing: border-box;
+}
+.type_of_car {
+    color: var(--Very-light-gray);
+    margin-top: 40px;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+}
+.description_cars {
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 40px;
+    line-height: 1.7rem;
+    padding-right: 10px;
+}
+
+.btn_learn_more {
+    width: 160px;
+    height: 55px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 85px;
+    background-color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.1rem;
+}
+.card_sedan button {
+    color: var(--Bright-orange);
+}
+.card_sedan button:hover {
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray);
+    border: 3px solid;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card_suv button {
+    color: var(--Dark-cyan);
+}
+.card_suv button:hover {
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+    border: 3px solid;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card_luxury button {
+    color: var(--Very-dark-cyan);
+}
+.card_luxury button:hover {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-gray);
+    border: 3px solid;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+/* Differents screens */
+
+@media (max-width: 1295px) {
+    .container {
+        width: 75vw;
+    }
+    .card_sedan, .card_suv, .card_luxury {
+        padding: 40px;
+    }
+}
+@media (max-width: 1110px) {
+    .container {
+        width: 80vw;
+    }
+    .card_sedan, .card_suv, .card_luxury {
+        padding: 20px;
+    }
+}
+@media (max-width: 950px) {
+    .container {
+        width: 85vw;
+    }
+    .card_sedan, .card_suv, .card_luxury {
+        padding: 20px;
+    }
+}
+/* Mobile screen */
+@media (max-width: 690px) {
+    .container {
+        width: 65vw;
+        height: 1600px;
+        margin-top: 500px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card_sedan, .card_suv, .card_luxury {
+        padding: 45px;
+        width: 100%;
+        height: 100%;
+    }
+    .card_sedan {
+        border-radius: 10px 10px 0 0;
+    }
+    .card_luxury {
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 70px;
+    }
+}

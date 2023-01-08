@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(images/pattern-background-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
+    overflow: hidden;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 400px;
+    height: 600px;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container_ilustration {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px 20px 0 0;
+    background: url(images/illustration-hero.svg);
+    background-size: cover;
+}
+
+.card h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.7rem;
+    margin-top: 35px;
+}
+.card h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.container_plan {
+    width: 80%;
+    height: 15%;
+    background-color: hsla(225, 100%, 94%, 0.329);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+.img_music {
+    width: 46px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.container_plan h2 {
+    font-weight: 900;
+    font-size: 1rem;
+    position: relative;
+    top: -30px;
+    left: 80px;
+}
+
+.container_plan h3 {
+    font-weight: 600;
+    font-size: 0.97rem;
+    position: relative;
+    top: -46px;
+    left: -36px;
+}
+
+.container_plan a {
+    font-weight: 700;
+    font-size: 0.83rem;
+    position: relative;
+    top: -80px;
+    left: 248px;
+    text-decoration: underline;
+    color: hsl(245, 70%, 44%);
+}
+.container_plan a:hover {
+    cursor: pointer;
+    color: hsl(251, 100%, 68%);
+    text-decoration: none;
+}
+
+.button_payment {
+     width: 80%;
+     height: 7.5%;
+     margin-top: 0px;
+     background-color: hsl(245, 75%, 52%);
+     border: none;
+     box-shadow: 0px 9px 22px hsla(245, 75%, 52%, 0.349);
+     border-radius: 10px;
+     color: white;
+     font-weight: 700;
+     font-size: 0.9rem;
+     margin-top: 30px;
+}
+.button_payment:hover {
+    cursor: pointer;
+    background-color: hsl(251, 100%, 68%);
+    transition: 0.3s;
+}
+.button_payment:active, .button_cancelOrder:active{
+    transform: scale(0.97);
+}
+
+.button_cancelOrder {
+     width: 30%;
+     height: 0%;
+     margin-top: 26px;
+     background-color: white;
+     border: none;
+     color: rgba(0, 0, 0, 0.548);
+     font-weight: 800;
+     font-size: 0.79rem;
+}
+.button_cancelOrder:hover {
+    cursor: pointer;
+    color: hsl(223, 47%, 23%);
+}
+
+
+/* Mobile Version*/
+@media (max-width: 576px) {
+    .card {
+        width: 350px;
+        height: 590px;
+    }
+    .card h1 {
+        font-size: 1.4rem;
+    }
+    .card h3 {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    .container_plan {
+        width: 85%;
+        height: 14%;
+    }
+    .container_plan h2 {
+        font-weight: 900;
+        font-size: 0.9rem;
+        
+    }
+    .container_plan h3 {
+        left: -30px;
+        font-size: 0.9rem;
+    }
+    .container_plan h4 {
+        left: 222px;
+        font-size: 0.8rem;
+    }
+    .button_payment {
+        width: 85%;
+        height: 8%;
+    }
+    .button_cancelOrder {
+        font-size: 0.83rem;
+    }
+}

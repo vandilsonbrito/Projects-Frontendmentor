@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Light-Grayish-Blue);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 740px;
+    height: 295px;
+    display: flex;
+}
+.banner {
+    width: 290px;
+    background: url(images/drawers.jpg);
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+.info_container {
+    width: 450px;
+    font-family: 'Manrope', sans-serif;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    text-align: start;
+    padding: 30px;
+}
+.info_container h1 {
+    font-size: 1.25rem;
+    margin-right: 30px;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.description {
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 0.85rem;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.perfil_share_wrapper {
+    margin-top: 0px;
+    display: flex;
+    position: absolute;
+}
+.photo_perfil {
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    margin-top: 35px;
+}
+.info_perfil {
+    width: 120px;
+    margin-left: 15px;
+}
+.nome_perfil {
+    position: relative;
+    top: 36px;
+    font-weight: 700;
+    font-size: 0.85em;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.date {
+    position: relative;
+    top: 39px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.button_share {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 165px;
+    margin-top: 42px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Light-Grayish-Blue);
+    padding: 3px 8px; 
+}
+
+.button_share:hover {
+    background-color: var(--Desaturated-Dark-Blue);
+}
+.button_share:hover path {
+    fill: white;
+}
+.button_share:active {
+    transform: scale(0.98);
+}
+
+.img_share {
+    width: 12px;
+    height: 10px;
+    position: absolute;
+    left: 2px;
+}
+.share_before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: relative;
+    top: 23px;
+    left: 85px;
+    transform: rotate(45deg);
+    z-index: 0;
+} 
+.card_share {
+    width: 210px;
+    height: 52px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: -25px;
+    left: -129px;
+    border-radius: 10px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    z-index: 5; 
+    visibility: hidden;
+}
+.card_share_p {
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: var(--Grayish-Blue);
+    letter-spacing: 0.18rem;
+    margin-bottom: 3px;
+    margin-left: -25px;
+}
+.active.card_share {
+    visibility: visible;
+}
+
+.facebook:hover path{
+    fill: #1877f2;
+}
+.twitter:hover path{
+    fill: #1d9bf0;
+}
+.pinterest:hover path{
+    fill: #e60023;
+}
+
+/* Mobile Screen*/
+@media (max-width: 810px) {
+    main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 350px;
+        height: 510px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .banner {
+        width: 100%;
+        height: 50%;
+        border-radius: 10px 10px 0 0px;
+    }
+    .info_container {
+        width: 100%;
+        height: 60%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .info_container h1 {
+        font-size: 1.1rem;
+        margin-right: 0px;
+    }
+    .description {
+        margin-top: 15px;
+        font-size: 0.8rem;
+
+    }
+    .perfil_share_wrapper {
+        margin-top: 0px;
+        display: flex;
+        position: absolute;
+    }
+    .photo_perfil {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        margin-top: 30px;
+    }
+    .info_perfil {
+        width: 120px;
+        margin-left: 15px;
+    }
+    .nome_perfil {
+        position: relative;
+        top: 35px;
+        font-weight: 700;
+        font-size: 0.8em;
+        color: var(--Very-Dark-Grayish-Blue);
+    }
+    .date {
+        position: relative;
+        top: 38px;
+        font-weight: 400;
+        font-size: 0.74rem;
+        color: var(--Desaturated-Dark-Blue);
+    }
+
+    .button_share {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        margin-left: 85px;
+        margin-top: 43px;
+        border: none;
+        cursor: pointer;
+        background-color: var(--Light-Grayish-Blue);
+        z-index: 2;
+    }
+
+    .img_share {
+        width: 12px;
+        height: 10px;
+        position: absolute;
+        left: 2px;
+    }
+    .share_before {
+        display: none;
+    } 
+    .card_share {
+        visibility: hidden;
+        width: 350px;
+        height: 65px;
+        box-sizing: border-box;
+        padding: 0px;
+        display: flex;
+        justify-content: left;
+        gap: 18px;
+        align-items: center;
+        position: relative;
+        top: 26px;
+        left: -320px;
+        border-radius: 0 0 10px 10px;
+        background-color: var(--Very-Dark-Grayish-Blue);
+        z-index: 1;
+    }
+    .card_share_p {
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--Grayish-Blue);
+        letter-spacing: 0.18rem;
+        margin-bottom: 3px;
+        margin-left: 30px;
+    }
+
+}

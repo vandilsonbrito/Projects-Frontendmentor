@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: var(--Red);
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.left_side {
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left_side h1 {
+    font-size: 3rem;
+    text-align: left;
+    margin-left: 150px;
+    line-height: 3.4rem;
+}
+.left_side p {
+    font-size: 1rem;
+    margin-left: 150px;
+    margin-top: 27px;
+}
+.rigth_side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.try_free {
+    width: 525px;
+    height: 60px;
+    background-color: var(--Blue);
+    color: white;
+    border-radius: 10px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.171);
+}
+.try_free p {
+   font-weight: 300;
+   font-size: 0.91rem;
+}
+.try_free span {
+    font-weight: 600;
+}
+
+form {
+    width: 525px;
+    height: 470px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    padding-top: 25px;
+}
+#name, #last_name, #email, #password {
+    width: 455px;
+    height: 55px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+#name::placeholder, #last_name::placeholder, #email::placeholder, #password::placeholder {
+    font-weight: bold;
+}
+button {
+    width: 455px;
+    background-color: var(--Green);
+    margin-top: 15px;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 2px hsl(154, 57%, 35%);
+}
+button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    position: relative;
+    top: 2px;
+}
+button:hover {
+    background-color: hsl(154, 57%, 35%);
+    cursor: pointer;
+}
+form p {
+    font-size: 0.7rem;
+    margin-top: 15px;
+    margin-left: 40px;
+    color: var(--Grayish-Blue);
+}
+.terms_services{
+    color: var(--Red);
+    font-weight: 700;
+    text-decoration: none;
+}

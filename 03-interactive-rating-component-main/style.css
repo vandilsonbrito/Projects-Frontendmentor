@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+}
+
+
+.rate_container {
+    width: 300px;
+    height: 310px;
+    background-color: #1f2630;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    padding: 30px;
+    font-family: 'Overpass', sans-serif;
+}
+
+.circle_star {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: hsl(213, 19%, 18%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rate_container h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.rate_container h5 {
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+    margin-top: 13px;
+    color: hsl(217, 12%, 63%);
+}
+
+.rate_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_rate {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 100%;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    margin-top: 25px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.button_rate:hover {
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+    transition: 0.3s;
+}
+.button_rate:focus {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.button_submit {
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 25px;
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    
+} 
+.button_submit:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+    transition: 0.3s all;
+}
+/* Efeito de click do botão */
+.button_rate:active, .button_submit:active {
+    transform: scale(0.98);
+}
+
+
+/*  SECOND SCREEN  */
+#thank_container {
+    display: none;
+    width: 300px;
+    height: 310px;
+    background-color: #1f2630;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    padding: 30px;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+}
+
+.img_thank {
+    width: 145px;
+    margin-top: 7px;
+}
+
+.star_result {
+    width: 165px;
+    height: 27px;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(25, 97%, 53%);
+    border-radius: 13px;
+    margin-top: 23px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star_result span {
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+.text_area {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+}
+.text_area h1 {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.text_area h5 {
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 0.83rem;
+    line-height: 1.25rem;
+    color: hsl(217, 12%, 63%);  
+} 
+
+
+/* Smartphone Screen */
+@media (max-width: 575px) {
+    .rate_container {
+        width: 285px;
+        height: 320px;
+        border-radius: 18px;
+        padding: 25px;
+    }
+
+    .button_submit {
+        height: 2.8rem;
+        margin-top: 30px;
+    }
+    .rate_container h5 {
+        font-size: 0.85rem;
+    }
+
+    /*  SECOND SCREEN  */
+    #thank_container {
+        width: 285px;
+        height: 320px;
+        padding: 25px;
+    }
+    .text_area h5 {
+        font-size: 0.9rem;
+    }
+    .star_result span {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-Light-Gray);
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    width: 550px;
+    height: 235px;
+    margin-top: 60px;
+}
+
+section h1 {
+    font-weight: 200;
+    font-size: 2.2em;
+    text-align: center;
+    color: var(--Very-Dark-Blue);
+}
+
+section h4 {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+}
+
+.card_supervisor, .card_team, .card_karma, .card_calculator {
+    width: 350px;
+    height: 245px;
+    background-color: white;
+    box-shadow: 0px 2px 10px hsla(245, 75%, 52%, 0.349);
+    border-radius: 8px;
+    padding: 30px;
+    padding-bottom: 15px;
+}
+.card_supervisor h2, .card_team h2, .card_karma h2, .card_calculator h2 {
+    color: var(--Very-Dark-Blue);
+}
+.card_supervisor p, .card_team p, .card_karma p, .card_calculator p {
+    color: var(--Grayish-Blue);
+    font-size: 0.82rem;
+    margin-top: 15px;
+}
+
+.card_supervisor {
+    position: relative;
+    top: 150px;
+    left: -380px;
+    border-top: 4px solid var(--Cyan);
+}
+.card_team {
+    position: relative;
+    top: -220px;
+    border-top: 4px solid var(--Red);
+}
+.card_karma {
+    position: relative;
+    top: -190px;
+    border-top: 4px solid var(--Orange);
+}
+.card_calculator {
+    position: relative;
+    top: -570px;
+    left: 380px;
+    border-top: 4px solid var(--Blue);
+}
+
+.imgs {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+@media (max-width: 1200px) {
+    .card_supervisor {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    .card_team {
+        position: relative;
+        top: 25px;
+    }
+    .card_karma {
+        position: relative;
+        top: 50px;
+    }
+    .card_calculator {
+        position: relative;
+        top: 75px;
+        left: 0px;
+    }
+    .attribution {
+        position: relative;
+        top: 120px;
+    }
+}
+
+@media (max-width: 596px) {
+    section {
+        width: 340px;
+        height: 220px;
+    }
+    section h1 {
+        font-size: 1.7em;
+    }
+}
