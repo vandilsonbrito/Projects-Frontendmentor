@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 30%);
+    --White: hsl(0, 0%, 100%);
+    --Ver-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(214, 73%, 96%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+header, main, footer {
+    padding: 0 20px;
+}
+
+header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-size: 1.3rem;
+}
+.notifications_container {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#number_unread_notifications {
+    font-weight: 600;
+    font-size: 1.1rem; 
+    margin-left: 10px;
+    width: 35px;
+    height: 28px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--Blue);
+    color: white;
+}
+.mark_as_read {
+    color: var(--Dark-grayish-blue);
+    font-size: 0.95rem;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    background-color: var(--Light-grayish-blue-1);
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;   
+    border-radius: 10px; 
+    padding: 15px;
+}
+.card_info {
+    font-size: 0.85rem;
+    letter-spacing: 0.01rem;
+}
+.profile_image {
+    width: 42px;
+}
+.post_description {
+    font-weight: 800;
+    color: var(--Dark-grayish-blue);
+    margin-left: 4px;
+}
+.group_name {
+    font-weight: 800;
+    margin-left: 4px;
+    color: var(--Blue);
+}
+.notification_time {
+    color: var(--Grayish-blue);
+    margin-top: 4px;
+}
+.private_message {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: var(--Dark-grayish-blue);
+}
+.private_message:hover {
+    background-color: var(--Light-grayish-blue-2);
+    cursor: pointer;
+}
+.post {
+    width: 35px;
+}
+.post:hover {
+    cursor: pointer;
+}
+.kimber_smith_container {
+    display: flex;
+    gap: 10px;
+}
+
+.mark_as_read:hover, .post_description:hover, .name:hover, .group_name:hover {
+    cursor: pointer;
+    color: var(--Blue); 
+    transition: 0.2s
+    ease;  
+}
+
+

@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-</head>
-<body>
-    <main>
-        <section class="section">
-          <img class="logo" src="images/logo.svg" alt="Logo Base Apparel">
-          <h1>WE'RE <strong>COMING SOON</strong></h1>
-          <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-          <form id="form" novalidate>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/logo.svg" alt="Logo Base Apparel">
+    </header>
+    <div class="banner"></div>
+    <section>
+        <h1>WE'RE <strong>COMING SOON</strong></h1>
+        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form id="form" novalidate>
+          <div class="input_wrapper">
             <input type="email" placeholder="Email Address" id="input_email" required>
             <button class="button_submit"><img src="images/icon-arrow.svg" alt=""></button>
-            <div class="email_error">
-                <img class="icone_error" src="images/icon-error.svg" alt="">
-                <p class="validate_phrase">Please provide a valid email</p>
-            </div>
-            <p class="email_success"></p>
-          </form>
-        </section>
-      
-        <div class="banner"></div>
-    </main>
+          </div>
+          <div class="email_error">
+              <img class="icone_error" src="images/icon-error.svg" alt="">
+              <p class="validate_phrase">Please provide a valid email</p>
+          </div>
+          <p class="email_success"></p>
+        </form>
+    </section>
     
     <footer>
-      <p class="attribution">
+      <p>
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
       </p>

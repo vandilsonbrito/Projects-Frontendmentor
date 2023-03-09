@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- JS -->
+  <script src="script.js"></script>
+</head>
+<body class="body">
+  <header>
+    <img class="logo" src="assets/images/logo.svg" alt="Logo">
+    
+    <nav class="nav_small_medium_screens">
+      <button class="ham">
+        <img class="menu_icon" src="assets/images/icon-menu.svg" alt="menu icon">
+      </button>
+    </nav>
+
+    <nav class="nav_large_screen">
+      <ul>
+        <li><a class="menuLink" href="#">Home</a></li>
+        <li><a class="menuLink" href="#">New</a></li>
+        <li><a class="menuLink" href="#">Popular</a></li>
+        <li><a class="menuLink" href="#">Trending</a></li>
+        <li><a class="menuLink" href="#">Categories</a></li>
+      </ul>
+    </nav>
+
+    <div class="overlay"></div>
+    <nav class="sideNav">
+      <button class="close">
+        <img class="close_icon" src="assets/images/icon-menu-close.svg" alt="close">
+      </button>
+      <ul>
+        <li><a class="menuLink" href="#">Home</a></li>
+        <li><a class="menuLink" href="#">New</a></li>
+        <li><a class="menuLink" href="#">Popular</a></li>
+        <li><a class="menuLink" href="#">Trending</a></li>
+        <li><a class="menuLink" href="#">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="first_two_sections">
+      <section class="title_section_container">
+        <div class="container_img_web3"></div>
+        <div class="title_container">
+          <h1>The Bright Future of Web 3.0?</h1>
+          <div>
+            <p>  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+            <button><a href="#">Read more</a></button>
+          </div>
+        </div>
+      </section>
+      <section class="new_section">
+        <h2>New</h2>
+        <a href="#">Hydrogen VS Electric Cars</a>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <div class="break_line"></div>
+        <a href="#">The Downsides of AI Artistry</a>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <div class="break_line"></div>
+        <a href="#">Is VC Funding Drying Up?</a>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </section>
+    </div>
+
+    <section class="curiosity_section">
+      <div class="curiosity_01">
+        <div class="img_curiosity_01"></div>
+        <div class="curiosity_info">
+          <p class="number_title">01</p>
+          <a href="#">Reviving Retro PCs</a>
+          <p class="description"> What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="curiosity_02">
+        <div class="img_curiosity_02"></div>
+        <div class="curiosity_info">
+          <p class="number_title">02</p>
+          <a href="#">Top 10 Laptops of 2022</a>
+          <p class="description">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="curiosity_03">
+        <div class="img_curiosity_03"></div>
+        <div class="curiosity_info">
+          <p class="number_title">03</p>
+          <a href="#">The Growth of Gaming</a>
+          <p class="description">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
+  </div>
+</footer>
+  
+</body>
+</html>

@@ -7,11 +7,11 @@ window.onload=function(){
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        console.log(email.value)
+        
         if((email.value === "") || (!validateEmail(email.value))) {
             email_error.style.visibility = 'visible'
             email_success.style.visibility = 'hidden' 
-            email.style.outline = 'color: hsl(0, 93%, 68%)';
+            email.style.border = '2px solid hsl(0, 93%, 68%)';
             
         }
         else if(validateEmail(email.value)) {
@@ -19,6 +19,7 @@ window.onload=function(){
             email_success.style.visibility = 'visible'
             email_success.innerText = "Your email has been registered"
             email_success.style.color = 'green';
+            email.style.border = '2px solid green';
         }
 
     })

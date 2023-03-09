@@ -1,0 +1,7 @@
+-> pegar todos os elementos com classe card
+-> comparar e quando o elemento target (clique) for igual ao elemento - card,
+ este irá ficar com background-color = branco e diminuirá no numero que indica
+qtd de notificações
+
+-> Quando clicar em "mark all as read" todos os card ficarão com bcc = branco
+e o numero de notificações irá para zero

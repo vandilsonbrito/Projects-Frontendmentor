@@ -20,122 +20,222 @@
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     background-image: url(images/bg-intro-desktop.png);
+    background-size: cover;
     background-color: var(--Red);
 }
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
-.left_side {
-    width: 50%;
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.left_side h1 {
-    font-size: 3rem;
-    text-align: left;
-    margin-left: 150px;
-    line-height: 3.4rem;
-}
-.left_side p {
-    font-size: 1rem;
-    margin-left: 150px;
-    margin-top: 27px;
-}
-.rigth_side {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'school_info school_info' 'sign_up sign_up';
+    padding: 20px;
 }
-.try_free {
-    width: 525px;
-    height: 60px;
+.school_info_container {
+    grid-area: school_info;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+.school_info_container h1 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    padding: 0 20px;
+}
+.school_info_container p {
+    margin-top: 22px;
+    padding: 0 10px;
+}
+
+.sign_up_container {
+    grid-area: sign_up;
+}
+
+.try_free_container {
+    min-width: 300px;
+    height: 90px;
     background-color: var(--Blue);
     color: white;
     border-radius: 10px;
-    margin-left: 40px;
+    font-size: 0.95rem;
+    text-align: center;
+    box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.253);
+    margin-top: 60px;
+    padding: 0 60px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.171);
 }
-.try_free p {
-   font-weight: 300;
-   font-size: 0.91rem;
+.try_free_container p {
+    line-height: 1.6rem;
 }
-.try_free span {
+.try_free_container span {
     font-weight: 600;
 }
-
-form {
-    width: 525px;
-    height: 470px;
+.sign_up_container form {
+    margin-top: 25px;
+    min-width: 300px;
+    min-height: 460px;
     background-color: white;
     border-radius: 10px;
-    margin-left: 40px;
-    display: flex;
-    flex-direction: column;
-    padding: 35px;
-    padding-top: 25px;
+    padding: 25px;
 }
-#name, #last_name, #email, #password {
-    width: 455px;
+.sign_up_container form #name, #last_name, #email, #password {
+    width: 100%;
     height: 55px;
-    margin-top: 20px;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.377);
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    border: 1px solid var(--Grayish-Blue);
+    margin-bottom: 18px;
+    padding: 18px;
 }
-#name::placeholder, #last_name::placeholder, #email::placeholder, #password::placeholder {
-    font-weight: bold;
+.sign_up_container form input::placeholder {
+    font-weight: 600;
+    font-size: 0.9rem;
 }
-button {
-    width: 455px;
-    background-color: var(--Green);
-    margin-top: 15px;
+#free_trial {
+    width: 100%;
     height: 55px;
+    background-color: var(--Green);
     border: none;
     border-radius: 5px;
-    box-shadow: 0px 3px 2px hsl(154, 57%, 35%);
-}
-button a {
-    text-decoration: none;
-    color: white;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.05rem;
-    position: relative;
-    top: 2px;
-}
-button:hover {
-    background-color: hsl(154, 57%, 35%);
     cursor: pointer;
 }
-form p {
-    font-size: 0.7rem;
-    margin-top: 15px;
-    margin-left: 40px;
-    color: var(--Grayish-Blue);
-}
-.terms_services{
-    color: var(--Red);
-    font-weight: 700;
+#free_trial a {
     text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
 }
+#free_trial:hover {
+    background-color:hsl(154, 51%, 62%);
+    transition: 0.3s ease-out;
+}
+#free_trial:active {
+    transform: scale(0.99);
+}
+
+.sign_up_container form p {
+    font-size: 0.75rem;
+    padding: 0 16px;
+    color: var(--Grayish-Blue);
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5rem;
+}
+
+.icon_error {
+    display: block;
+    position: relative;
+    top: -57px;
+    left: 88%;
+}
+#error_message {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--Red);
+    position: relative;
+    top: -57px;
+    left: 30%;
+    margin-bottom: -40px;
+}
+
+.terms_services {
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 20px;
+    font-size: 11px; 
+    text-align: center;
+}
+
+/* Error messages off */
+.st_name_error_message, .nd_name_error_message, .email_error_message, .password_error_message {
+    display: none;
+}
+
+
+/* Different screens*/
+@media (min-width: 650px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 950px) {
+    .container {
+        width: 85%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'school_info sign_up' 'school_info sign_up';
+        padding: 20px;
+    }
+    .school_info_container {
+        grid-area: school_info;
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .school_info_container h1 {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.3rem;
+        padding: 0px 0 0 50px;
+        text-align: left;
+    }
+    .school_info_container p {
+        text-align: left;
+        margin-top: 30px;
+        padding-right: 80px;
+        padding-left: 50px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .try_free_container {
+        width: 520px;
+        height: 58px;
+    }
+
+    .sign_up_container {
+        grid-area: sign_up;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .sign_up_container form {
+        margin-top: 25px;
+        width: 520px;
+        min-height: 440px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 40px;
+    }
+    .sign_up_container form p {
+        font-size: 0.7rem;
+    }
+    
+ }

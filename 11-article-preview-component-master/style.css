@@ -13,19 +13,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
 }
 
 body {
     background-color: var(--Light-Grayish-Blue);
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     user-select: none;
-}
-
-main {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,45 +29,62 @@ main {
 }
 
 .card {
-    width: 740px;
-    height: 295px;
-    display: flex;
+    width: 87%;
+    height: 500px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: 'banner banner' 'info_container info_container';
+    
 }
 .banner {
-    width: 290px;
-    background: url(images/drawers.jpg);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0px;
+    background-image: url(images/drawers.jpg);
     background-size: cover;
-    border-radius: 10px 0 0 10px;
+    grid-area: banner;
 }
 .info_container {
-    width: 450px;
-    font-family: 'Manrope', sans-serif;
+    width: 100%;
+    height: 100%;
     background-color: white;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0px 0px 10px 10px;
+    grid-area: info_container;
     text-align: start;
     padding: 30px;
 }
+ 
 .info_container h1 {
-    font-size: 1.25rem;
-    margin-right: 30px;
+    font-size: 1rem;
     color: var(--Very-Dark-Grayish-Blue);
 }
+
 .description {
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 15px;
     font-size: 0.85rem;
     color: var(--Very-Dark-Grayish-Blue);
+    line-height: 1.22rem;
 }
 .perfil_share_wrapper {
-    margin-top: 0px;
+    width: 70%;
+    margin: 0;
     display: flex;
-    position: absolute;
+    justify-content: space-between;
+    margin: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.profile {
+    display: flex;
 }
 .photo_perfil {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 .info_perfil {
     width: 120px;
@@ -79,86 +92,87 @@ main {
 }
 .nome_perfil {
     position: relative;
-    top: 36px;
+    top: 35px;
     font-weight: 700;
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: var(--Very-Dark-Grayish-Blue);
 }
 .date {
     position: relative;
-    top: 39px;
+    top: 38px;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.74rem;
     color: var(--Desaturated-Dark-Blue);
 }
-
+.button_wrapper {
+    width: 100%;
+}
 .button_share {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     border-radius: 100%;
-    margin-left: 165px;
-    margin-top: 42px;
+    position: relative;
+    top: 40px;
+    left: 100%;
     border: none;
     cursor: pointer;
     background-color: var(--Light-Grayish-Blue);
-    padding: 3px 8px; 
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .button_share:hover {
     background-color: var(--Desaturated-Dark-Blue);
 }
-.button_share:hover path {
+.icon_share {
+    width: 15px;
+    border-radius: 100%;
+}
+.icon_share * {
+    pointer-events: none;
+  }
+.button_share:hover path{
     fill: white;
 }
 .button_share:active {
     transform: scale(0.98);
 }
 
-.img_share {
-    width: 12px;
-    height: 10px;
-    position: absolute;
-    left: 2px;
-}
-.share_before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-color: var(--Very-Dark-Grayish-Blue);
-    position: relative;
-    top: 23px;
-    left: 85px;
-    transform: rotate(45deg);
-    z-index: 0;
-} 
 .card_share {
-    width: 210px;
-    height: 52px;
+    visibility: hidden;
+    width: 100%;
+    height: 270%;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 0px;
     display: flex;
-    justify-content: space-evenly;
+    gap: 18px;
     align-items: center;
     position: relative;
-    top: -25px;
-    left: -129px;
-    border-radius: 10px;
+    top: -65px;
+    border-radius: 0 0 10px 10px;
     background-color: var(--Very-Dark-Grayish-Blue);
-    z-index: 5; 
-    visibility: hidden;
-}
-.card_share_p {
-    font-weight: 500;
-    font-size: 0.7rem;
-    color: var(--Grayish-Blue);
-    letter-spacing: 0.18rem;
-    margin-bottom: 3px;
-    margin-left: -25px;
+    z-index: 1;
+    transition: 0.3s;
 }
 .active.card_share {
     visibility: visible;
 }
-
+.wrapper {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card_share_p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--Grayish-Blue);
+    letter-spacing: 0.3rem;
+    margin-bottom: 3px;
+    margin-left: 30px;
+}
 .facebook:hover path{
     fill: #1877f2;
 }
@@ -168,118 +182,138 @@ main {
 .pinterest:hover path{
     fill: #e60023;
 }
-
-/* Mobile Screen*/
-@media (max-width: 810px) {
-    main {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+footer {
+    font-size: 11px; 
+    text-align: center; 
+    color: hsl(228, 45%, 44%);
+    position: relative;
+    top: 70px;
+}
+@media (min-width: 380px) {
+    .perfil_share_wrapper {
+        width: 80%;
+        margin-top: 20px;
     }
+}
+@media (min-width: 480px) {
+    .perfil_share_wrapper {
+        width: 80%;
+        margin-top: 55px;
+    }
+}
+@media (min-width: 768px) {
     .card {
-        width: 350px;
-        height: 510px;
-        display: flex;
-        flex-direction: column;
-        
+        width: 80%;
+        height: 700px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 'banner banner' 'info_container info_container';
     }
     .banner {
         width: 100%;
-        height: 50%;
-        border-radius: 10px 10px 0 0px;
+        height: 150%;
+    }
+    .info_container h1 {
+        font-size: 1.5rem;
+        color: var(--Very-Dark-Grayish-Blue);
+    }
+    
+    .description {
+        margin-top: 30px;
+        font-size: 1rem;
+        color: var(--Very-Dark-Grayish-Blue);
+        line-height: 1.22rem;
+    }
+    .perfil_share_wrapper {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .card_share {
+        visibility: hidden;
+        width: 100%;
+        height: 350%;
+        justify-content: space-around;
+        gap: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 710px;
+        height: 278px;
+        display: grid;
+        grid-template-columns: 38% 62%;
+        grid-template-areas: 'banner info_container' 'banner info_container';
+    }
+    .banner {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
     }
     .info_container {
         width: 100%;
-        height: 60%;
-        border-radius: 0px 0px 10px 10px;
+        height: 100%;
+        background-color: white;
+        border-radius: 0px 10px 10px 0px;
+        padding-left: 38px;
     }
     .info_container h1 {
-        font-size: 1.1rem;
-        margin-right: 0px;
-    }
-    .description {
-        margin-top: 15px;
-        font-size: 0.8rem;
-
-    }
-    .perfil_share_wrapper {
-        margin-top: 0px;
-        display: flex;
-        position: absolute;
-    }
-    .photo_perfil {
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        margin-top: 30px;
-    }
-    .info_perfil {
-        width: 120px;
-        margin-left: 15px;
-    }
-    .nome_perfil {
-        position: relative;
-        top: 35px;
-        font-weight: 700;
-        font-size: 0.8em;
+        font-size: 1.25rem;
+        margin-right: 30px;
         color: var(--Very-Dark-Grayish-Blue);
     }
-    .date {
-        position: relative;
-        top: 38px;
-        font-weight: 400;
-        font-size: 0.74rem;
-        color: var(--Desaturated-Dark-Blue);
+    .description {
+        margin-top: 20px;
+        margin-right: 20px;
+        font-size: 0.8rem;
+        color: var(--Very-Dark-Grayish-Blue);
     }
-
-    .button_share {
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        margin-left: 85px;
-        margin-top: 43px;
-        border: none;
-        cursor: pointer;
-        background-color: var(--Light-Grayish-Blue);
-        z-index: 2;
-    }
-
-    .img_share {
-        width: 12px;
-        height: 10px;
-        position: absolute;
-        left: 2px;
+    .perfil_share_wrapper {
+        width: 88%;
+        margin-top: 0px;
+    
     }
     .share_before {
-        display: none;
-    } 
-    .card_share {
-        visibility: hidden;
-        width: 350px;
-        height: 65px;
-        box-sizing: border-box;
-        padding: 0px;
-        display: flex;
-        justify-content: left;
-        gap: 18px;
-        align-items: center;
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-color: var(--Very-Dark-Grayish-Blue);
         position: relative;
         top: 26px;
-        left: -320px;
-        border-radius: 0 0 10px 10px;
+        left: 80px;
+        transform: rotate(45deg);
+    } 
+    .card_share {
+        width: 210px;
+        height: 52px;
+        padding: 5px;
+        align-items: center;
+        position: relative;
+        top: -120px;
+        left: 540px;
+        border-radius: 10px;
         background-color: var(--Very-Dark-Grayish-Blue);
-        z-index: 1;
+        z-index: 1; 
+        visibility: hidden;
+    }
+    .active.card_share {
+        visibility: visible;
+    }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
     }
     .card_share_p {
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.7rem;
         color: var(--Grayish-Blue);
         letter-spacing: 0.18rem;
         margin-bottom: 3px;
-        margin-left: 30px;
+        margin-left: -25px;
     }
-
 }
+
+

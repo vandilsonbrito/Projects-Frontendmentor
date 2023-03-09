@@ -1,16 +1,18 @@
- window.onload=function(){ 
-    const button = document.getElementById('button_share')
-    const share = document.getElementById('card_share')
+const body = document.querySelector('body');
+const button = document.querySelector('#button_share');
+const cardShare = document.querySelector('#card_share');
+const iconShare = document.querySelector(".icon_share");
 
-    button.addEventListener('click', function(event) {
-    if(share.style.visibility == 'hidden') {
-        share.style.visibility = 'visible'
+body.addEventListener('click', function(e) {
+    const target = e.target.className;
+    if(target === 'button_share' || target === 'icon_share') {
+        cardShare.classList.add('active');
+        iconShare.classList.add("active");
     }
     else {
-        share.style.visibility = 'hidden'
+        cardShare.classList.remove('active');
+        iconShare.classList.remove("active");
     }
 
-    })
-}
-
+})
 
