@@ -8,7 +8,7 @@ window.onload=function(){
             
             list.addEventListener('click', () => {
                 faq_list.forEach((list) => {   
-                    console.log(list.childNodes[3]) 
+                    console.log(list.childNodes) 
                     list.childNodes[3].classList.remove('selected') /* Hide answers*/
                 })
                 list.childNodes[3].classList.add('selected') /* Show answers*/ 
@@ -42,4 +42,3 @@ window.onload=function(){
     }
     arrowUp()
 }
-    /* document.querySelectorAll('.faq_list').addEventListener('click', arrowUp)  --> Não está funcionando, pois dá erro do querySelectorAll com o addEventListener*/

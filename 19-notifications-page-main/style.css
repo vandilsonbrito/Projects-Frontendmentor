@@ -13,8 +13,8 @@
     --Blue: hsl(219, 85%, 30%);
     --White: hsl(0, 0%, 100%);
     --Ver-light-grayish-blue: hsl(210, 60%, 98%);
-    --Light-grayish-blue-1: hsl(214, 73%, 96%);
-    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Light-grayish-blue-1: hsl(218, 100%, 98%);
+    --Light-grayish-blue-2: hsl(208, 35%, 93%);
     --Grayish-blue: hsl(219, 14%, 63%);
     --Dark-grayish-blue: hsl(219, 12%, 42%);
     --Very-dark-blue: hsl(224, 21%, 14%);
@@ -25,8 +25,6 @@ body {
     width: 100vw;
     background-color: white;
     font-family: 'Plus Jakarta Sans', sans-serif;
-}
-header, main, footer {
     padding: 0 20px;
 }
 
@@ -60,18 +58,26 @@ header h1 {
     color: var(--Dark-grayish-blue);
     font-size: 0.95rem;
 }
+.mark_as_read:hover {
+    font-size: 0.97rem;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
 
 .card {
     width: 100%;
     height: auto;
-    background-color: var(--Light-grayish-blue-1);
     display: flex;
     gap: 12px;
     margin-top: 15px;   
     border-radius: 10px; 
-    padding: 15px;
+    padding: 15px 23px 15px 15px;
+}
+.unread_notifications {
+    background-color: var(--Light-grayish-blue-1);
 }
 .card_info {
+    width: 100%;
     font-size: 0.85rem;
     letter-spacing: 0.01rem;
 }
@@ -112,7 +118,7 @@ header h1 {
 .post:hover {
     cursor: pointer;
 }
-.kimber_smith_container {
+.picture_comment {
     display: flex;
     gap: 10px;
 }
@@ -123,5 +129,120 @@ header h1 {
     transition: 0.2s
     ease;  
 }
+.symbol_unread_notification {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background-color: red;
+    position: relative;
+    left: 15rem;
+    margin-top: -0.65rem;
+    display: block;
+}
 
+/* Responsitivty */
+@media (min-width: 475px) {
+    .symbol_unread_notification {
+        position: relative;
+        left: 22rem;
+    }
+}
+@media (min-width: 590px) {
+    .symbol_unread_notification {
+        position: relative;
+        left: 30rem;
+    }
+}
 
+@media (min-width: 768px) {
+    body {
+        padding: 0 50px;
+    }
+    
+    .symbol_unread_notification {
+        position: relative;
+        left: 30rem;
+    }
+    footer {
+        margin-top: 30%;
+    }
+}
+@media (min-width: 821px) {
+    body {
+        padding: 0 200px;
+    }
+    
+    .symbol_unread_notification {
+        position: relative;
+        left: 30rem;
+    }
+    footer {
+        margin-top: 30%;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        padding: 0 340px;
+        background-color: var(--Light-grayish-blue-1);
+    }
+    header {
+        width: 100%;
+        background-color: white;
+        padding: 30px 35px 0 35px;
+        margin-top: 60px;
+        border-radius: 18px 18px 0 0 ;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    #number_unread_notifications {
+        font-weight: 600;
+        font-size: 1rem; 
+        margin-left: 10px;
+        width: 32px;
+        height: 25px;
+    }
+    .mark_as_read {
+        color: var(--Dark-grayish-blue);
+        font-size: 1rem;
+    }
+    .mark_as_read:hover {
+        font-size: 1.01rem;
+    }
+    main {
+        width: 100%;
+        background-color: white;
+        padding: 30px;
+        border-radius: 0 0 18px 18px ;
+    }
+    .card_info {
+        width: 100%;
+        font-size: 0.92rem;
+        letter-spacing: 0.01rem;
+    }
+    .profile_image {
+        width: 44px;
+    }
+    .picture_comment_wrapped {
+        width: 100%;
+        display: flex;
+    }
+    .picture_comment {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+    }
+    .post {
+        width: 45px;
+    }
+    .post:hover {
+        border: 1px solid var(--Light-grayish-blue-1);
+    }
+    .symbol_unread_notification {
+        position: relative;
+        left: 33rem;
+    }
+    footer {
+        margin-top: 30%;
+    }
+}

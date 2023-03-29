@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="card_img_section">
+      <div>
+        <div class="card_back_wrapped">
+          <img class="card_back_pic" src="images/bg-card-back.png" alt="card">
+          <p class="cvc_number front">000</p>
+        </div>
+        
+        <div class="card_front_wrapped">
+          <img class="card_front_pic front" src="images/bg-card-front.png" alt="card">
+          <img class="card_logo front" src="images/card-logo.svg" alt="">
+          <p class="card_number_automatic_filling front">0000 0000 0000 0000</p>
+          <p class="card_name_automatic_filling front">Jane Appleseed</p>
+          <p class="card_exp_month_automatic_filling front">00</p>
+          <p class="slash front">/</p>
+          <p class="card_exp_year_automatic_filling front">00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card_details_section">
+      <form action="" class="form">
+        <div class="cardholder_name_wrapped">
+          <p><label for="iname">Cardholder Name</label></p>
+          <input class="input_name" type="text" name="name" id="iname" placeholder="e.g. Jane Appleseed" maxlength="24" required>
+        </div>
+        <div class="error_message">
+          <p class="wrong_format_name">Wrong format, letters only</p>
+          <p class="blank_name">Can't be blank</p>
+        </div>
+
+        <div class="card_number_wrapped">
+          <p class="card_number_input"><label for="icard">Card Number</label></p>
+          <input type="text" name="card number" id="icard" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" required>
+        </div>
+        <div class="error_message">
+          <p class="wrong_format_card">Wrong format, numbers only</p>
+          <p class="blank_card">Can't be blank</p>
+        </div>
+
+        <div class="expiration_cvc_container">
+          <div class="expiration_wrapped">
+            <p><label for="imonth">Exp. Date (MM</label>/<label for="iyear">YY</label>)</p>
+            <input type="text" name="month" id="imonth" placeholder="MM" maxlength="2" required>
+            <input type="text" name="year" id="iyear" placeholder="YY" maxlength="2" required>
+          </div>
+          <div class="error_message_date">
+            <p class="wrong_format_date">Wrong format, numbers only</p>
+            <p class="blank_date">Can't be blank</p>
+          </div>
+
+          <div class="cvc_wrapped">
+            <p><label for="icvc">CVC</label></p>
+            <input type="text" name="cvc" id="icvc" placeholder="e.g. 123" maxlength="3" required>
+            <div class="error_message_cvc">
+              <p class="wrong_format_cvc">Wrong format, numbers only</p>
+              <p class="blank_cvc">Can't be blank</p>
+            </div>
+          </div>
+          
+        </div>
+        <p class="button_confirm"><input type="submit" name="button" id="iconfirm" value="Confirm"></p> 
+      </form>
+
+       <!-- Completed state start -->
+       <section class="completed_state_section">
+          <img src="images/icon-complete.svg" alt="">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="button_continue"><a href="#">Continue</a></button>
+       </section>
+       
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

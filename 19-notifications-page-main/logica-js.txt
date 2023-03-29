@@ -5,3 +5,7 @@ qtd de notificações
 
 -> Quando clicar em "mark all as read" todos os card ficarão com bcc = branco
 e o numero de notificações irá para zero
+
+
+// setar as três primeiras notificações manualmente com 
+childnodes[] = BCC(azul)

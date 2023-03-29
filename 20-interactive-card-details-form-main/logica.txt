@@ -1,0 +1,7 @@
+-> pegar valor a cada keyup do input e ir preenchendo no cartão (done)
+
+-> validar tamanho do input no backend também  (done)
+-> validar todos os inputs (tipo correto)  (done)
+-> mostrar mensagens de erro e focus no input  (done)
+
+-> Espaçar números do cartão que estão sendo preenchidos

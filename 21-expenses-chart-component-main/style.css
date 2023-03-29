@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background-color: hsl(12, 100%, 94%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 90%;
+    height: 80%;
+}
+.myBalance_container {
+    width: 100%;
+    height: 100px;
+    background-color: var(--Soft-red);
+    border-radius: 11px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30%;
+    /* margin-top: 20%; */
+}
+.balance_wrapped {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.balance_wrapped h5 {
+    font-weight: 200;
+    font-size: 1rem;
+}
+.balance_wrapped h3 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 7px;
+}
+.chart_container {
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 25px;
+}
+.chart_container h1 {
+    text-align: start;
+    font-weight: 700;
+}
+.chart_container ul {
+    list-style: none;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Medium-brown);
+}
+.chart {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.chart_revenue_days {
+    width: 2.9rem;
+    height: 28px;
+    background-color: black;
+    border-radius: 5px;
+    position: relative;
+    top: -10px;
+    left: -5px;
+    color: white;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-top: 12%;
+    visibility: hidden;
+}
+.chart p {
+    color: var(--Medium-brown);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.chart_bar {
+    width: 35px;
+    height: 50px;
+    background-color: var(--Soft-red);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.chart_bar:hover {
+    background-color: hsl(10, 95%, 77%);
+}
+.revenue_container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.revenue_thisMonth p {
+    color: var(--Medium-brown);
+    font-size: 1.02rem;
+}
+.revenue_thisMonth h2 {
+    margin-top: 10px;
+    font-size: 2rem;
+}
+.revenue_lastMonth {
+    text-align: right;
+}
+.revenue_lastMonth p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.revenue_lastMonth span {
+    color: var(--Medium-brown);
+    font-size: 1.02rem;
+}
+
+footer {
+    font-size: 11px; text-align: center; 
+    position: relative;
+    top: 8%;
+}
+
+
+/* Responsive screens */
+@media (min-width: 720px) {
+    main {
+        width: 80%;
+        height: 70%;
+    }
+    .myBalance_container {
+        gap: 50%;
+    }
+}
