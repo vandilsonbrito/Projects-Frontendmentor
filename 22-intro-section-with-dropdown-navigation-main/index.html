@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <style>
+    .attribution {font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="logo">
+        
+        <nav class="nav_small_medium_screens">
+          <button class="ham">
+            <img class="menu_icon" src="images/icon-menu.svg" alt="menu icon">
+          </button>
+        </nav>
+    
+        <nav class="nav_large_screen">
+          <ul class="ul_principal">
+              <li><a class="menuLink" id="arrow_up" href="#">Features <img class="icon_arrow" src="images/icon-arrow-down.svg" alt=""></a>
+                <ul class="ul_feature" id="appearance">
+                    <li><a class="menuLink" href="#"><img src="images/icon-todo.svg" alt=""><span>Todo List</span></a></li>
+                    <li><a class="menuLink" href="#"><img src="images/icon-calendar.svg" alt=""><span>Calendar</span></a></li>
+                    <li><a class="menuLink" href="#"><img src="images/icon-reminders.svg" alt=""><span>Reminders</span></a></li>
+                    <li><a class="menuLink" href="#" last="true"><img src="images/icon-planning.svg" alt=""><span>Planning</span></a></li>
+                </ul>
+              </li>
+            <li><a class="menuLink" id="arrow_up" href="#">Company <img class="icon_arrow" src="images/icon-arrow-down.svg" alt=""></a>
+                <ul class="ul_company" id="appearance">
+                    <li><a class="menuLink" href="#">History</a></li>
+                    <li><a class="menuLink" href="#">Our Team</a></li>
+                    <li><a class="menuLink" href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a class="menuLink" href="#">Careers</a></li>
+            <li><a class="menuLink" href="#">About</a></li>
+          </ul>
+
+          <ul class="ul_login">
+            <li class="btn_login_large_screen"><a class="menuLink" href="#">Login</a></li>
+            <li class="btn_register_large_screen"><a class="menuLink" href="#">Register</a></li>
+          </ul>
+        </nav>
+    
+
+        <div class="overlay"></div>
+        <nav class="sideNav">
+          <button class="close">
+            <img class="close_icon" src="images/icon-close-menu.svg" alt="close icon">
+          </button>
+          <ul class="principal_nav">
+
+            <li class="margin_feature"><a class="menuLink" id="arrow_up" href="#">Features<img class="icon_arrow" src="images/icon-arrow-down.svg" alt=""></a>
+              <ul class="margin" id="appearance">
+                  <li><a class="menuLink" id="a_features" href="#"><img src="images/icon-todo.svg" alt="">Todo List</a></li>
+                  <li><a class="menuLink" id="a_features" href="#"><img src="images/icon-calendar.svg" alt="">Calendar</a></li>
+                  <li><a class="menuLink" id="a_features" href="#"><img src="images/icon-reminders.svg" alt=""> Reminders</a></li>
+                  <li><a class="menuLink" id="a_features" href="#"><img src="images/icon-planning.svg" alt=""> Planning</a></li>
+              </ul>
+            </li>
+
+            <li><a class="menuLink" id="arrow_up" href="#">Company <img class="icon_arrow" src="images/icon-arrow-down.svg" alt=""></a>
+                <ul class="margin" id="appearance">
+                    <li><a class="menuLink" href="#">History</a></li>
+                    <li><a class="menuLink" href="#">Our Team</a></li>
+                    <li><a class="menuLink" href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li class="margin"><a class="menuLink" href="#">Careers</a></li>
+            <li class="margin"><a class="menuLink" href="#">About</a></li>
+          </ul>
+
+          <ul class="ul_login">
+            <li class="button_login"><a class="menuLink" href="#">Login</a></li>
+            <li class="button_register"><a class="menuLink" href="#">Register</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero_section">
+        </section>
+            
+        <section class="info_section">
+            <h1>Make remote work</h1>
+            <h4>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</h4>
+            <a href="#"><button class="button_learn_more">Learn more</button></a>
+
+            <div class="clients_container">
+                <img class="clients_logo" src="images/client-databiz.svg" alt="databiz logo">
+                <img class="clients_logo" src="images/client-audiophile.svg" alt="audipphile logo">
+                <img class="clients_logo" src="images/client-meet.svg" alt="meet logo">
+                <img class="clients_logo" src="images/client-maker.svg" alt="maker logo">
+            </div>
+        </section>
+    </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
+  </div>
+  
+  <script src="./js/script.js"></script>
+</body>
+</html>
