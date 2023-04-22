@@ -293,7 +293,7 @@ function cardFormat(value) {
         parts.push(match.substring(i, i+4))
     }
 
-    if (parts.length) {
+    if(parts.length) {
         return parts.join(' ')
     } else {
         return value
