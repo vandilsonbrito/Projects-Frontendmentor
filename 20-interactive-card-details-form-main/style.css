@@ -28,6 +28,7 @@ main {
     display: grid;
     grid-template-rows: auto;
     grid-template-areas: 'card_details_section' 'card_img_section';
+
 }
 .card_img_section {
     width: 100%;
@@ -63,12 +64,18 @@ main {
     top: -10rem;
     left: -16.2rem;
     z-index: 15;
+    
 }
 .card_number_automatic_filling {
     position: relative;
     top: -125px;
     left: 20px;
     letter-spacing: 0.15rem;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    text-decoration-line: none;
 }
 .card_name_automatic_filling {
     text-transform: uppercase;
@@ -282,10 +289,9 @@ form input::placeholder {
     margin-top: 45px;
 }
 
-footer {
-    position: absolute;
-    top: 98%;
-    left: 12%;  
+.attribution {
+    position: relative;
+    top: 20%; 
 }
 
 /* Responsive screen */

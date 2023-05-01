@@ -146,7 +146,8 @@ footer {
         cursor: pointer;
     }
     .icone_error {
-        left: 78%;
+        top: 50%;
+        left: 60%;
     }
     .validate_phrase {
         left: -25%;

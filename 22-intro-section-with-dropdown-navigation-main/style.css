@@ -223,6 +223,9 @@ main {
 .clients_logo {
     width: 65px;
 }
+.attribution {
+    margin-top: 60px;
+}
 
 
 /* Differents screens */
