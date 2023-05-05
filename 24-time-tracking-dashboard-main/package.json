@@ -4,13 +4,17 @@
   "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "build": "postcss public/styles.css -o src/styles.css"
+    "build": "postcss src/styles.css -o public/styles.css",
+    "watch": "postcss src/styles.css -o public/styles.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23"
+  },
+  "devDependencies": {
     "postcss-cli": "^10.1.0",
     "tailwindcss": "^3.3.2"
   }
