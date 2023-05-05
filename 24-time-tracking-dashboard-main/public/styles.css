@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --Blue: 246deg, 80%, 60%;
+        --Light-red: 15deg, 100%, 70%;
+        --Soft-blue: 195deg, 74%, 62%;
+        --Light-red: 348deg, 100%, 68%;
+        --Lime-green: 145deg, 58%, 55%;
+        --Violet: 264deg, 64%, 52%;
+        --Soft-orange: 43deg, 84%, 65%;
+        --Very-dark-blue: 226deg, 43%, 10%;
+        --Dark-blue: 235deg, 46%, 20%;
+        --Desaturated-blue: 235, 45%, 61%;
+        --Pale-Blue: 236deg, 100%, 87%;
+    }
+}
