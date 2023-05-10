@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="w-screen h-screen font-Rubik p-6 bg-Very-dark-blue text-white flex flex-col gap-6  md:p-20 lg:flex-row lg:px-32  lg:justify-center lg:items-stretch ">
+
+    <!-- Card Profile -->
+    <div class="w-full h-48 bg-Dark-blue rounded-xl flex-col  lg:w-64 lg:h-full ">
+
+      <div class="w-full h-32 bg-Blue rounded-xl flex gap-x-5 items-center  lg:h-2/3 lg:p-8 lg:flex-col lg:items-start lg:gap-y-10">
+        <img src="../images/image-jeremy.png" alt="profile image" class="w-16 border-3 border-white rounded-full ml-8  lg:ml-0 lg:w-20 ">
+        <div class="flex-col">
+          <p class="text-Pale-Blue text-sm  lg:text-base">Report for</p>
+          <h4 class="text-2xl font-thin  lg:mr-10 lg:text-4.7xl lg:leading-tight" >Jeremy Robson</h4>
+        </div>
+      </div>
+
+      <div class="w-auto h-16 flex justify-evenly items-center text-Pale-Blue font-thin text-base  lg:h-40 lg:flex-col lg:items-start lg:pl-8 lg:justify-evenly">
+        <button class="cursor-pointer hover:text-white hover:font-normal focus:text-white focus:font-normal border-none focus:outline-none" id="daily"  tabindex="1">Daily</button>
+        <button class="cursor-pointer hover:text-white hover:font-normal focus:text-white focus:font-normal border-none" id="weekly"  tabindex="2">Weekly</button>
+        <button class="cursor-pointer hover:text-white hover:font-normal focus:text-white focus:font-normal border-none" id="monthly"  tabindex="3">Monthly</button>
+      </div>
+
+    </div>
+
+  
+    <div class="flex flex-col gap-6  lg:w-fit lg:h-fit lg:gap-4 lg:grid grid-cols-3 lg:justify-between lg:items-center ">
+
+      <!-- Card Work -->
+      <div class="w-full h-40 bg-Light-red-work rounded-xl flex-col overflow-hidden  lg:w-62 lg:h-60 ">
+        <img src="../images/icon-work.svg" alt="profile image" class="w-17 relative -top-3 left-2/3">
+
+        <div class="w-full h-32 bg-Dark-blue rounded-xl px-7 flex flex-col z-100 relative -top-10 cursor-pointer hover:bg-Dark-blue-hover hover:ease-in-out  lg:h-52 lg:-top-9 lg:py-6">
+
+          <div class="w-full h-1/4 gap-7  lg:flex lg:flex-row lg:justify-between">
+            <p class="text-lg font-medium title mt-5  lg:mt-0"></p>
+            <div class="h-3 flex justify-end items-center -mt-4 hover:fill-white  lg:mt-2 ">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" class="hover:fill-white" fill-rule="evenodd" /></svg>
+            </div>
+          </div>
+
+          <div class="w-full h-3/4 mt-5 flex flex-row justify-between items-start  lg:flex lg:flex-col lg:mt-2 lg:justify-around " >
+            <p class="w-1/2 text-3xl font-thin mt-3 currentHrs  lg:text-5.5xl "></p>
+            <p class="w-1/2 text-Pale-Blue text-sm previousHrs text-end mt-5  lg:w-full lg:text-left lg:mt-0"></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card Play -->
+      <div class="w-full h-40 bg-Soft-blue rounded-xl flex-col overflow-hidden  lg:w-62 lg:h-60 ">
+        <img src="../images/icon-play.svg" alt="profile image" class="w-17 relative -top-3 left-2/3">
+
+        <div class="w-full h-32 bg-Dark-blue rounded-xl px-7 flex flex-col z-100 relative -top-10 cursor-pointer hover:bg-Dark-blue-hover hover:ease-in-out  lg:h-52 lg:-top-8 lg:py-6">
+
+          <div class="w-full h-1/4 gap-7  lg:flex lg:flex-row lg:justify-between  ">
+            <p class="text-lg font-medium title mt-5  lg:mt-0"></p>
+            <div class="h-3 flex justify-end items-center -mt-4 hover:fill-white  lg:mt-2 ">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" class="hover:fill-white" fill-rule="evenodd" /></svg>
+            </div>
+          </div>
+
+          <div class="w-full h-3/4 mt-5 flex flex-row justify-between items-start  lg:flex lg:flex-col lg:mt-2 lg:justify-around " >
+            <p class="w-1/2 text-3xl font-thin mt-3 currentHrs  lg:text-5.5xl "></p>
+            <p class="w-1/2 text-Pale-Blue text-sm previousHrs text-end mt-5  lg:w-full lg:text-left lg:mt-0"></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card Study -->
+      <div class="w-full h-40 bg-Light-red rounded-xl flex-col overflow-hidden  lg:w-62 lg:h-60 ">
+        <img src="../images/icon-study.svg" alt="profile image" class="w-17 relative -top-3 left-2/3">
+
+        <div class="w-full h-32 bg-Dark-blue rounded-xl px-7 flex flex-col z-100 relative -top-10 cursor-pointer hover:bg-Dark-blue-hover hover:ease-in-out  lg:h-52 lg:-top-8 lg:py-6">
+
+          <div class="w-full h-1/4 gap-7  lg:flex lg:flex-row lg:justify-between  ">
+            <p class="text-lg font-medium title mt-5  lg:mt-0"></p>
+            <div class="h-3 flex justify-end items-center -mt-4 hover:fill-white  lg:mt-2 ">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" class="hover:fill-white" fill-rule="evenodd" /></svg>
+            </div>
+          </div>
+
+          <div class="w-full h-3/4 mt-5 flex flex-row justify-between items-start  lg:flex lg:flex-col lg:mt-2 lg:justify-around " >
+            <p class="w-1/2 text-3xl font-thin mt-3 currentHrs  lg:text-5.5xl "></p>
+            <p class="w-1/2 text-Pale-Blue text-sm previousHrs text-end mt-5  lg:w-full lg:text-left lg:mt-0"></p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Card Exercise -->
+      <div class="w-full h-40 bg-Lime-green rounded-xl flex-col overflow-hidden  lg:w-62 lg:h-60 ">
+        <img src="../images/icon-exercise.svg" alt="profile image" class="w-17 relative -top-2 left-2/3">
+
+        <div class="w-full h-32 bg-Dark-blue rounded-xl px-7 flex flex-col z-100 relative -top-5 cursor-pointer hover:bg-Dark-blue-hover hover:ease-in-out  lg:h-52 lg:-top-2 lg:py-6">
+
+          <div class="w-full h-1/4 gap-7  lg:flex lg:flex-row lg:justify-between  ">
+            <p class="text-lg font-medium title mt-5  lg:mt-0"></p>
+            <div class="h-3 flex justify-end items-center -mt-4 hover:fill-white  lg:mt-2 ">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" class="hover:fill-white" fill-rule="evenodd" /></svg>
+            </div>
+          </div>
+
+          <div class="w-full h-3/4 mt-5 flex flex-row justify-between items-start  lg:flex lg:flex-col lg:mt-2 lg:justify-around " >
+            <p class="w-1/2 text-3xl font-thin mt-3 currentHrs  lg:text-5.5xl "></p>
+            <p class="w-1/2 text-Pale-Blue text-sm previousHrs text-end mt-5  lg:w-full lg:text-left lg:mt-0"></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card Social -->
+      <div class="w-full h-40 bg-Violet rounded-xl flex-col overflow-hidden  lg:w-62 lg:h-60 ">
+        <img src="../images/icon-social.svg" alt="profile image" class="w-17 relative -top-4 left-2/3">
+
+        <div class="w-full h-32 bg-Dark-blue rounded-xl px-7 flex flex-col z-100 relative -top-16 cursor-pointer hover:bg-Dark-blue-hover hover:ease-in-out  lg:h-52 lg:-top-12.5 lg:py-6">
+
+          <div class="w-full h-1/4 gap-7  lg:flex lg:flex-row lg:justify-between  ">
+            <p class="text-lg font-medium title mt-5  lg:mt-0"></p>
+            <div class="h-3 flex justify-end items-center -mt-4 hover:fill-white  lg:mt-2 ">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" class="hover:fill-white" fill-rule="evenodd" /></svg>
+            </div>
+          </div>
+
+          <div class="w-full h-3/4 mt-5 flex flex-row justify-between items-start  lg:flex lg:flex-col lg:mt-2 lg:justify-around " >
+            <p class="w-1/2 text-3xl font-thin mt-3 currentHrs  lg:text-5.5xl "></p>
+            <p class="w-1/2 text-Pale-Blue text-sm previousHrs text-end mt-5  lg:w-full lg:text-left lg:mt-0"></p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card Self Care -->
+      <div class="w-full h-40 bg-Soft-orange rounded-xl flex-col overflow-hidden  lg:w-62 lg:h-60 ">
+        <img src="../images/icon-self-care.svg" alt="profile image" class="w-17 relative -top-4 left-2/3">
+
+        <div class="w-full h-32 bg-Dark-blue rounded-xl px-7 flex flex-col z-100 relative -top-8 cursor-pointer hover:bg-Dark-blue-hover hover:ease-in-out  lg:h-52 lg:-top-5 lg:py-6">
+
+          <div class="w-full h-1/4 gap-7  lg:flex lg:flex-row lg:justify-between  ">
+            <p class="text-lg font-medium title mt-5  lg:mt-0"></p>
+            <div class="h-3 flex justify-end items-center -mt-4 hover:fill-white  lg:mt-2 ">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" class="hover:fill-white" fill-rule="evenodd" /></svg>
+            </div>
+          </div>
+
+          <div class="w-full h-3/4 mt-5 flex flex-row justify-between items-start  lg:flex lg:flex-col lg:mt-2 lg:justify-around " >
+            <p class="w-1/2 text-3xl font-thin mt-3 currentHrs  lg:text-5.5xl "></p>
+            <p class="w-1/2 text-Pale-Blue text-sm previousHrs text-end mt-5  lg:w-full lg:text-left lg:mt-0"></p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="attribution relative top-auto  lg:hidden">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
+    </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
