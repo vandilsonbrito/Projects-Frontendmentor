@@ -512,17 +512,11 @@ video {
 .ml-8 {
   margin-left: 2rem;
 }
-.mt-1 {
-  margin-top: 0.25rem;
-}
 .mt-3 {
   margin-top: 0.75rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
-}
-.mt-7 {
-  margin-top: 1.75rem;
 }
 .flex {
   display: flex;
@@ -795,54 +789,6 @@ video {
     margin-top: 0.5rem;
   }
 
-  .lg\:mt-3 {
-    margin-top: 0.75rem;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .lg\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
-  .lg\:mt-1 {
-    margin-top: 0.25rem;
-  }
-
-  .lg\:-mt-0 {
-    margin-top: -0px;
-  }
-
-  .lg\:-mt-2 {
-    margin-top: -0.5rem;
-  }
-
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
-  .lg\:mt-7 {
-    margin-top: 1.75rem;
-  }
-
-  .lg\:-mt-10 {
-    margin-top: -2.5rem;
-  }
-
-  .lg\:-mt-20 {
-    margin-top: -5rem;
-  }
-
-  .lg\:-mt-5 {
-    margin-top: -1.25rem;
-  }
-
-  .lg\:mt-14 {
-    margin-top: 3.5rem;
-  }
-
   .lg\:flex {
     display: flex;
   }
@@ -917,10 +863,6 @@ video {
     align-items: center;
   }
 
-  .lg\:items-stretch {
-    align-items: stretch;
-  }
-
   .lg\:justify-center {
     justify-content: center;
   }
@@ -943,11 +885,6 @@ video {
 
   .lg\:gap-y-10 {
     row-gap: 2.5rem;
-  }
-
-  .lg\:bg-slate-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(203 213 225 / var(--tw-bg-opacity));
   }
 
   .lg\:p-8 {
