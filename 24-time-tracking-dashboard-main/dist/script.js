@@ -27,7 +27,7 @@
                 };
 
 
-                dailyButton.addEventListener('focus', () => {
+                dailyButton.addEventListener('click', () => {
                     dailyButton.classList.add("focus");
                     lastClicked = dailyButton;
                     for(let i = 0; i < data.length; i++) {
@@ -37,7 +37,7 @@
                     };
                 });
                 
-                weeklyButton.addEventListener('focus', () => {
+                weeklyButton.addEventListener('click', () => {
                     weeklyButton.classList.add("focus");
                     lastClicked = weeklyButton;
                     for(let i = 0; i < data.length; i++) {
@@ -47,7 +47,7 @@
                     };
                 });
 
-                monthlyButton.addEventListener('focus', () => {
+                monthlyButton.addEventListener('click', () => {
                     monthlyButton.classList.add("focus");
                     lastClicked = monthlyButton;
                     for(let i = 0; i < data.length; i++) {
