@@ -19,8 +19,8 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     margin: auto;
-    width: 470px;
-    height: 370px;
+    width: 590px;
+    height: 450px;
     border-radius: 10px;
     background-color: #fff;
     display: flex;
@@ -41,12 +41,13 @@ body {
 .right_side {
     width: 50%;
     height: 100%;
+    padding: 10px 0 0px 8px;
 }
 
 .right_side h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
-    font-size: 0.67rem;
+    font-size: 0.75rem;
     margin-top: 25px;
     margin-left: 25px;
     margin-bottom: 10px;
@@ -57,44 +58,45 @@ body {
 .right_side h1 {
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    font-size: 1.7rem;
-    margin: 10px 25px 10px 25px;
+    font-size: 2rem;
+    margin: 20px 35px 10px 25px;
     color: rgb(0, 0, 0);
+    line-height: 2rem
 }
 
 .right_side h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 0.73rem;
+    font-size: 0.85rem;
     line-height: 1.3rem;
-    margin: 15px 20px 10px 25px;
+    margin: 20px 30px 10px 25px;
     color: rgba(0, 0, 0, 0.603);
 }
 
 .right_side h2 {
     font-family: 'Fraunces', sans-serif;
     font-weight: 600;
-    font-size: 1.7rem;
-    margin: 12px 20px 10px 25px;
+    font-size: 2rem;
+    margin: 28px 20px 10px 25px;
     color: hsl(158, 36%, 37%);
 }
 .right_side h5 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 12px 20px 10px 25px;
     color: rgba(0, 0, 0, 0.555);
-    position: absolute;
-    top: 260px;
-    left: 360px;
+    position: relative;
+    top: -38px;
+    left: 150px;
 }
 .right_side button {
-    width: 180px;
-    height: 40px;
+    width: 79%;
+    height: 47px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.74rem;
-    margin: 5px 20px 10px 28px;
+    margin: 10px 20px 10px 28px;
     border: none;
     border-radius: 7px;
     background-color: hsl(158, 36%, 37%);
@@ -144,6 +146,7 @@ body {
     .right_side {
         width: 100%;
         height: 50%;
+        padding: 0;
     }
     .right_side h3 {
         font-size: 0.72rem;
