@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+    <style>
+      .attribution {margin-top: 5px; font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+    <link rel="stylesheet" href="./dist/styles.css">
+</head>
+<body class="w-screen h-screen px-5 bg-Off-white flex flex-col justify-center font-Poppins  md:px-32 lg:px-64 lg:py-5 ">
+    <main class="w-full h-fit px-7 py-12 bg-White rounded-tl-3xl rounded-tr-3xl rounded-br-[100px] rounded-bl-3xl flex flex-col  lg:rounded-br-[190px] lg:px-16">
+        <form action="" class="w-full flex flex-row justify-between  md:h-32 lg:w-8/12">
+            <div class="w-fit flex flex-col  items-center ">
+              <label for="day" class="label text-Smokey-grey">Day</label>
+              <input type="number" maxlength="2" name="day" class="day w-[85px] h-14 input outline-none border-[1px] border-Light-grey px-5  lg:w-[130px] lg:h-16" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
+              <!-- invalid input -->
+              <div class="w-full h-5">
+                <p id="invalid-input-day" class="text-[0.5rem] text-Light-red mt-1 hidden">This field is required</p>
+              </div>  
+            </div>
+            <div class="w-fit flex flex-col items-center ">
+              <label for="month" class="label text-Smokey-grey">Month</label>
+              <input type="number" maxlength="2" name="month" class="month w-[85px] h-14 input outline-none border-[1px] border-Light-grey px-5  lg:w-[130px] lg:h-16" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
+              <!-- invalid input -->
+              <div class="w-full h-5">
+                <p id="invalid-input-month" class="text-[0.5rem] text-Light-red mt-1 hidden">This field is required</p>
+              </div>
+            </div>
+            <div class="w-fit flex flex-col items-center ">
+              <label for="year" class="label text-Smokey-grey">Year</label>
+              <input type="number" maxlength="4" name="year" class="year w-[85px] h-14 input outline-none border-[1px] px-4 border-Light-grey  lg:w-[130px] lg:h-16" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+
+              <!-- invalid input -->
+              <div class="w-full h-5">
+                <p id="invalid-input-year" class="text-[0.5rem] text-Light-red mt-1 hidden">This field is required</p>
+              </div>
+
+            </div>
+        </form>
+     
+
+        <div class="w-full h-[1px] bg-Light-grey mt-16   lg:mt-2"></div>
+        <div class="w-full h-fit flex flex-row justify-end  md:mb-10 lg:mb-0">
+            <button id="btn" class="w-16 h-16 relative -top-8 lg:-top-10 bg-Purple rounded-full flex flex-col justify-center items-center hover:bg-Off-black  lg:w-20 lg:h-20"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="3"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg></button>
+        </div>
+        
+        <div class="w-fit h-36 flex flex-col justify-between  md:h-52 md:px-8 lg:px-0 lg:-mt-7 lg:h-60 ">
+            <p class="text-5xl italic  md:text-6xl lg:text-7xl"><span id="fill-year" class="text-Purple">--</span> years</p>
+            <p class="text-5xl italic  md:text-6xl lg:text-7xl"><span id="fill-month" class="text-Purple">--</span> months</p>
+            <p class="text-5xl italic  md:text-6xl lg:text-7xl"><span id="fill-day" class="text-Purple">--</span> days</p>
+        </div>
+    </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
+  </div>
+
+  <script src="./dist/script.js"></script>
+</body>
+</html>

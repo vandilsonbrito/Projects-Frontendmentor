@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.label {
+    @apply uppercase text-[0.85rem]  flex self-start mb-1 tracking-[0.18rem] 
+}
+.input {
+    @apply rounded-md  text-xl  focus:border-Purple appearance-none  lg:text-3xl;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none !important;
+}
+
+input[type=number] { 
+   -moz-appearance: textfield !important;
+   appearance: textfield !important;
+}
