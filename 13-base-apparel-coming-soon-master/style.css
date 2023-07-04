@@ -146,7 +146,6 @@ footer {
         cursor: pointer;
     }
     .icone_error {
-        top: 50%;
         left: 60%;
     }
     .validate_phrase {
@@ -214,6 +213,9 @@ footer {
         top: -160px;
         left: -15%;
     }
+    .icone_error {
+        left: 80%;
+    }
 }
 @media (min-width: 740px) {
     .email_success {
@@ -280,6 +282,9 @@ footer {
         top: -55px;
         left: 80%; 
         cursor: pointer;
+    }
+    .icone_error {
+        left: 70%;
     }
     .validate_phrase {
         top: -111px;
