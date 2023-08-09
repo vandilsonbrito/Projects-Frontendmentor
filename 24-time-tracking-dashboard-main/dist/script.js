@@ -57,7 +57,7 @@
                     };
                 });
 
-                document.addEventListener("click", (event) => {
+                document.addEventListener("mousedown", (event) => {
                     if (event.target !== dailyButton && event.target !== weeklyButton && event.target !== monthlyButton) {
                         event.preventDefault();
                         lastClicked.focus();
