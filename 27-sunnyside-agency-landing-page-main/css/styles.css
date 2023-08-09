@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.formMenu {
+    width:30px;
+    height:30px;
+    border: 25px solid; /* As 4 bordas sólidas com 25px de espessura */
+    border-color: #3ebfff white white #3ebfff; /* cores: topo, direita, inferior, esquerda */
+}

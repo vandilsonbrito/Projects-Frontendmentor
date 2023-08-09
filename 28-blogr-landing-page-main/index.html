@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./dist/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-White-grayish">
+  
+    <header class="relative w-full h-[570px] px-5 py-14 overflow-hidden rounded-bl-[110px] rounded-br-sm">
+
+      <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-Very-light-red to-Light-light-red"></div>
+
+      <svg width="1300" height="1250" viewBox="0 0 1324 1323"  class="absolute -top-[300px] -left-[335px] inset-0 object-cover object-center z-10"  xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1=".695%" y1="0%" x2="99.305%" y2="100%" id="a"><stop stop-color="#FF8F71" offset="0%"/><stop stop-color="#FF3E55" offset="100%"/></linearGradient></defs><path d="M821.895188,497.739327 L821.895188,825.739327 L493.895188,825.739327 L493.895188,597.739327 C493.895188,542.510852 538.666713,497.739327 593.895188,497.739327 L821.895188,497.739327 Z M276.655938,496.460979 C367.230637,496.460979 440.655938,569.88628 440.655938,660.460979 C440.655938,751.035678 367.230637,824.460979 276.655938,824.460979 C186.081239,824.460979 112.655938,751.035678 112.655938,660.460979 C112.655938,569.88628 186.081239,496.460979 276.655938,496.460979 Z M822.227687,111.489551 L822.227687,439.489551 L594.227687,439.489551 C538.999212,439.489551 494.227687,394.718026 494.227687,339.489551 L494.227687,339.489551 L494.227687,111.489551 L822.227687,111.489551 Z M440.061253,110.58581 L440.061253,338.58581 C440.061253,393.814285 395.289728,438.58581 340.061253,438.58581 L112.061253,438.58581 L112.061253,110.58581 L440.061253,110.58581 Z" transform="rotate(22 67.652 1066.199)" fill="url(#a)" fill-rule="evenodd"/></svg>
+      
+      <div class="w-full h-full flex flex-row justify-between relative z-20  lg:hidden">
+        <div class="w-full h-10 flex flex-row justify-between items-center">
+          <div><img src="images/logo.svg" alt="logo"></div>
+          <div class="cursor-pointer" id="hamburger-menu"><img class="" id="icon-hamb" src="images/icon-hamburger.svg" alt=""><img class="hidden" id="icon-close" src="images/icon-close.svg" alt=""></div>
+        </div>
+      </div>
+      
+      <!-- Desktop -->
+      <nav class="nav-desktop max-[1023px]:hidden lg:visible  relative z-20 md:16 lg:px-28 py-5">
+        <div class="w-full h-full flex flex-row justify-between">
+          <div class="md:w-[60%] lg:w-[47%] h-fit flex items-center  ">
+            <img class="mr-10" src="images/logo.svg" alt="logo">
+            <ul class="w-full flex justify-evenly text-White-grayish font-Ubuntu font-medium cursor-pointer">
+              <li class="w-[74px] flex justify-between items-center">Product<img src="images/icon-arrow-light.svg" alt=""></li>
+              <li class="w-[85px] flex justify-between items-center">Company<img src="images/icon-arrow-light.svg" alt=""></li>
+              <li class="w-[77px] flex justify-between items-center" id="nav-connect-desktop">Connect<img src="images/icon-arrow-light.svg" alt=""></li>
+            </ul>
+          </div>
+          <ul class="max-[1023px]:hidden w-[200px] h-fit flex justify-between items-center font-Ubuntu font-medium text-White-grayish">
+            <li class=""><a href="#">Login</a></li>
+            <a href="#">
+              <button class="w-32 h-[46px] bg-white text-Light-light-red font-semibold rounded-full flex justify-center items-center hover:cursor-pointer hover:text-White hover:bg-White-off hover:bg-opacity-40">Sign Up</button>
+            </a>
+          </ul>
+        </div>
+
+        <div class="w-[155px] h-[135px] bg-White rounded-md  absolute z-50 left-[38%] hidden" style="box-shadow: 2px 15px 25px 5px rgba(0, 0, 0, 0.212);" id="connected-container-desktop">
+          <ul class="font-Ubuntu w-full h-full flex flex-col justify-evenly items-start px-5 py-3 ">
+            <a href="#">
+              <li class="hover:font-bold hover:ease-in-out hover:duration-300">Contact</li>
+            </a>
+            <a href="#">
+              <li class="hover:font-bold hover:ease-in-out hover:duration-300">Newsletter</li>
+            </a>
+            <a href="#">
+              <li class="hover:font-bold hover:ease-in-out hover:duration-300">LinkedIn</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="w-full h-fit absolute z-10 top-[150px] lg:top-40 flex justify-center pr-9">
+        <div class="z-20 text-white">
+          <h1 class="text-4xl font-Ubuntu text-center leading-[47px] px-2 z-10 lg:text-6xl mt-16">A modern publishing platform</h1>
+          <p class="mt-7 text-xl font-Overpass text-center ">Grow your audience and build your online brand</p>
+        </div>
+      </div>
+      
+      <div class="w-full z-20 absolute top-[430px] left-[9%] flex  lg:justify-center lg:top-[380px] lg:left-0">
+        <div class="w-[82%] text-white flex justify-evenly  lg:w-[23%] lg:justify-between ">
+          <a href="#"><button class="w-[145px] h-[52px] lg:h-[50px] rounded-full bg-white text-Light-red font-Ubuntu font-bold mr-2 hover:text-White hover:bg-White-off hover:bg-opacity-40">Start for Free</button></a>
+          <a href="#"><button class="w-[145px] h-[52px] lg:h-[50px] rounded-full bg-transparent border-[1px] border-white text-white font-Ubuntu font-bold  hover:bg-white hover:text-Light-red">Learn More</button></a>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <nav class="relative w-[90%]  bg-White z-50 -top-[410px] left-[5%] flex-col justify-around items-center font-Overpass font-semibold text-lg h-[306px] rounded-md shadow-[2px_35px_60px_-15px_rgba(0,0,0,0.3)]  hidden "  id="nav"><!-- h-[450px] -->
+          <ul class="menu-titles  h-40 flex flex-col justify-around items-center ">
+            <li class="w-[85px] h-5 flex flex-row justify-between items-center hover:cursor-pointer" id="nav-product-mobile">Product<img class="" src="images/icon-arrow-dark.svg" alt=""></li>
+            <li class="w-[95px] h-5 flex flex-row justify-between items-center hover:cursor-pointer" id="nav-company-mobile">Company<img class="" src="images/icon-arrow-dark.svg" alt=""></li>
+            <li class="w-[88px] h-5 flex flex-row justify-between items-center hover:cursor-pointer" id="nav-connect-mobile">Connect<img class="" src="images/icon-arrow-dark.svg" alt=""></li>
+          </ul>
+          
+          <div class="hidden" id="connect-menu">
+            <ul class="w-72 h-36 -mt-6 bg-White-off rounded-md flex flex-col justify-evenly items-center text-Very-dark-grayish-blue">
+              <li class=""><a href="#">Contact</a></li>
+              <li class=""><a href="#">Newsletter</a></li>
+              <li class=""><a href="#">LinkedIn</a></li>
+            </ul>
+            <div class="w-72 h-[1px] bg-Grayish-blue mt-5"></div>
+          </div>
+  
+          <ul class="w-28 h-24 flex flex-col justify-between items-center mt-5">
+            <li class=""><a href="#">Login</a></li>
+            <a href="#">
+              <button class="w-32 h-12 bg-gradient-to-r from-Very-light-red to-Light-light-red text-white rounded-full flex flex-col justify-center items-center hover:cursor-pointer mb-3">Sign Up</button>
+            </a>
+          </ul>
+      </nav>
+    </header>
+
+    
+    <main class="overflow-hidden" id="main"> 
+        <section class="lg:hidden">
+          <div class="mt-24 ">
+            <h2 class="text-2xl text-center text-Very-dark-gray-blue font-Overpass font-bold ">Designed for the future</h2>
+            <div class="w-full flex justify-center ">
+              <img class="mt-9 lg:max-lg:hidden" src="images/illustration-editor-mobile.svg" alt="">
+              <img class="max-[1023px]:hidden lg:visible" src="images/illustration-editor-desktop.svg" alt="">
+            </div>
+          </div>
+          <div class="w-full px-10 text-center mt-10">
+            <h3 class="text-2xl text-center text-Very-dark-gray-blue font-Overpass font-bold px-5">Introducing an extensible editor</h3>
+            <p class="mt-3 text-Very-dark-grayish-blue">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+          </div>
+          <div class="w-full px-10 text-center mt-12">
+            <h3 class="text-2xl text-center text-Very-dark-gray-blue font-Overpass font-bold px-10">Robust content management</h3>
+            <p class="mt-4 text-Very-dark-grayish-blue">Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+          </div>
+        </section>
+        <!-- Desktop -->
+        <section class="max-[1023px]:hidden lg:visible relative">
+          <div class="mt-14">
+            <h2 class=" text-center text-Very-dark-gray-blue font-Overpass font-bold text-4xl relative top-24">Designed for the future</h2>
+            <div class="w-full flex justify-end relative left-[260px]">
+              <img class="lg:visible" src="images/illustration-editor-desktop.svg" alt="">
+            </div>
+          </div>
+          <div class="absolute top-[230px] px-24">
+            <div class="w-[50%] px-10 text-start mt-10">
+              <h3 class="text-2xl text-start text-Very-dark-gray-blue font-Overpass font-bold ">Introducing an extensible editor</h3>
+              <p class="mt-6 text-Very-dark-grayish-blue leading-7">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+            </div>
+            <div class="w-[50%] px-10 text-center mt-16">
+              <h3 class="text-2xl text-start text-Very-dark-gray-blue font-Overpass font-bold ">Robust content management</h3>
+              <p class="mt-5 text-start text-Very-dark-grayish-blue leading-7">Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Mobile -->
+        <section class="lg:hidden">
+          <div class="-mt-28">
+            <div class="w-full flex justify-center"><img class="z-20 relative top-52" src="images/illustration-phones.svg" alt=""></div>
+            <div class="w-full h-[530px] overflow-hidden bg-Very-dark-gray-blue rounded-tr-[110px] rounded-bl-[110px] relative">
+              <img class="img-pattern-circles  absolute -top-28 " src="images/bg-pattern-circles.svg" alt="">
+              <div class="absolute top-[220px]">
+                <h3 class="text-3xl text-center text-White font-Overpass font-bold px-10">State of the Art Infrastructure</h3>
+                <p class="mt-4 text-White-off text-center px-8 ">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Desktop -->
+        <section class="max-[1023px]:hidden lg:visible">
+          <div class="relative top-[50px]">
+            <div class="w-full flex justify-center">
+              <img class="max-[1023px]:hidden w-[450px] z-20 absolute -top-14 left-20" src="images/illustration-phones.svg" alt="">
+            </div>
+            <div class="w-[full] h-[330px] overflow-hidden bg-Very-dark-gray-blue rounded-tr-[100px] rounded-bl-[100px] relative flex justify-end">
+              <img class="img-pattern-circles  absolute -top-[650px] -left-60" src="images/bg-pattern-circles.svg" alt="">
+              <div class="w-[50%] absolute top-[100px] ">
+                <h3 class="text-4xl text-start text-White font-Overpass font-bold ">State of the Art Infrastructure</h3>
+                <p class="mt-4 text-White-off text-start text-[0.9rem] pr-40 font-Overpass leading-6">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Mobile -->
+        <section class="lg:hidden">
+          <div class="mt-14">
+            <div class="w-full flex justify-center">
+              <img class="" src="images/illustration-laptop-mobile.svg" alt=""></div>
+          </div>
+          <div class="w-full px-10 text-center mt-10">
+            <h3 class="text-2xl text-center text-Very-dark-gray-blue font-Overpass font-bold px-5">Free, open, simple</h3>
+            <p class="mt-4 text-Very-dark-grayish-blue text-center">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          </div>
+
+          <div class="w-full px-10 text-center mt-10">
+            <h3 class="text-2xl text-center text-Very-dark-gray-blue font-Overpass font-bold px-5">Powerful tooling</h3>
+            <p class="mt-4 text-Very-dark-grayish-blue text-center">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+          </div>
+        </section>
+        <!-- Desktop -->
+        <section class="max-[1023px]:hidden lg:visible relative top-28 ">
+          <div class="mt-14">
+            <div class="w-full flex justify-start relative -left-[260px]"><img class="lg:hidden" src="images/illustration-laptop-mobile.svg" alt=""><img class="lg:visible" src="images/illustration-laptop-desktop.svg" alt=""></div>
+          </div>
+          <div class="h-[500px] absolute top-[180px] left-[45%] px-24 ">
+            <div class=" px-8 text-start mt-10">
+              <h3 class="text-3xl text-start text-Very-dark-gray-blue font-Overpass font-bold ">Free, open, simple</h3>
+              <p class="mt-6 text-Very-dark-grayish-blue leading-7">Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+            </div>
+            <div class=" px-10 text-center mt-16">
+              <h3 class="text-3xl text-start text-Very-dark-gray-blue font-Overpass font-bold ">Powerful tooling</h3>
+              <p class="mt-5 text-start text-Very-dark-grayish-blue leading-7">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.</p>
+            </div>
+          </div>
+        </section>
+    </main>
+    
+    <footer class="w-full h-[900px] lg:h-[350px] bg-Very-dark-black-blue mt-32 rounded-tr-[110px] lg:flex lg:py-20 ">
+        <img class="w-fit h-fit mx-auto lg:ml-40 py-20 lg:py-0 " src="images/logo.svg" alt="logo Blogr">
+
+        <section class="w-full h-fit text-center flex flex-col items-center lg:w-[60%] lg:-ml-28 lg:flex lg:flex-row lg:justify-start lg:gap-28 lg:items-start">
+          <ul class="lg:text-left">
+            <a href="#">
+              <li class="text-lg text-white font-semibold mb-6">Product</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b ">Overview</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Pricing</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Marketplace</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Features</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-10 lg:hover:border-b">Integrations</li>
+            </a>
+          </ul>
+          <ul class="lg:text-left">
+            <a href="#">
+              <li class="w-fit text-lg text-white font-semibold mb-6">Company</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">About</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Team</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Blog</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-10 lg:hover:border-b">Careers</li>
+            </a>
+          </ul>
+          <ul class="lg:text-left">
+            <a href="#">
+              <li class="text-lg text-white font-semibold mb-6">Connect</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Contact</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:border-b">Newsletter</li>
+            </a>
+            <a href="#">
+              <li class="w-fit text-Grayish-blue text-lg mb-1 lg:hover:relative ">LinkedIn</li>
+            </a>
+          </ul>
+        </section>
+    </footer>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/vandilsonbrito">Vandilson Brito</a>.
+  </div>
+
+  <script src="dist/script.js"></script>
+</body>
+</html>

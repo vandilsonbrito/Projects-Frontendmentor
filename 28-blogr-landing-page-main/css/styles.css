@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-desktop {
+    @media(max-width: 1024px) {
+        display: none!important;
+    }
+}
+
+.img-pattern-circles {
+    @media((min-width: 520px) && (max-width: 768px)) {
+        width: 30%;
+    }
+}
+
+  

@@ -572,6 +572,10 @@ video {
   --tw-border-opacity: 1;
   border-color: hsl(0 0% 86% / var(--tw-border-opacity));
 }
+.border-Light-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 68% / var(--tw-border-opacity));
+}
 .bg-Light-grey {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 86% / var(--tw-bg-opacity));
@@ -616,8 +620,26 @@ video {
 .text-\[0\.5rem\] {
   font-size: 0.5rem;
 }
+.text-\[0\.7rem\] {
+  font-size: 0.7rem;
+}
+.text-\[0\.6rem\] {
+  font-size: 0.6rem;
+}
 .italic {
   font-style: italic;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+.tracking-normal {
+  letter-spacing: 0em;
 }
 .text-Light-red {
   --tw-text-opacity: 1;

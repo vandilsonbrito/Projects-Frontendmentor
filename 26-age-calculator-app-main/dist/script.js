@@ -8,9 +8,7 @@
     const fillDay = document.querySelector('#fill-day');
     const fillMonth = document.querySelector('#fill-month');
     const fillYear = document.querySelector('#fill-year');
-    /* console.log(day)
-    console.log(month)
-    console.log(year) */
+
 
 
     btn.addEventListener('click', () => {
