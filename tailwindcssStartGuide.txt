@@ -1,0 +1,34 @@
+-> npm init -y
+
+-> npm install tailwindcss
+
+-> npx tailwindcss init
+
+-> criar pasta/arquivo - css/styles.css 
+-> inserir: 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+-> criar arquivo postcss.config.js
+
+-> npm install postcss-cli autoprefixer 
+-> inserir: 
+module.exports = {
+    plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+    ]
+}
+
+-> at scripts on package.json: 
+"build": "postcss css/styles.css -o src/styles.css",
+"watch": "postcss css/styles.css -o src/styles.css --watch"
+
+-> npm run build
+
+-> at content on tailwind.config.js:
+ './*.html',
+
+-> npm run watch
+
