@@ -193,7 +193,7 @@ bt_confirm.addEventListener('click', function(e) {
         year_input.style.border = '1px solid var(--Light-grayish-violet)'
         verifyInput += 1
     }
-    if(((validateInputNumb(month_input.value) !== true) || (month_input.value).length > 2) || ((validateInputNumb(year_input.value) !== true) || (year_input.value).length > 2)) {
+    if(((validateInputNumb(month_input.value) !== true) || (month_input.value).length > 2) || (month_input.value > 12) || ((validateInputNumb(year_input.value) !== true) || (year_input.value).length > 2)) {
         wrong_format_date.style.display = 'block'
         month_input.style.border = '1px solid var(--Red)'
         year_input.style.border = '1px solid var(--Red)'

@@ -23,7 +23,7 @@ body {
     
 }
 main {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
     display: grid;
     grid-template-rows: auto;
@@ -93,6 +93,7 @@ main {
     left: 220px;
 }
 .slash {
+    width: 10px;
     font-size: 0.58rem;
     position: relative;
     top: -134.48437px;
@@ -330,7 +331,7 @@ form input::placeholder {
         grid-template-areas: 'card_img_section card_details_section' 'card_img_section card_details_section'  ;
     }
     form {
-        width: 50%;
+        width: 55%;
         
     }
     .cardholder_name_wrapped input, .card_number_wrapped input, .expiration_wrapped input, .cvc_wrapped input  {
@@ -365,6 +366,7 @@ form input::placeholder {
         transform: translate(110px, -180px);
     } 
     .cvc_number {
+        width: 30px;
         font-size: 0.85rem;
         letter-spacing: 0.1rem;
         position: relative;
@@ -379,6 +381,7 @@ form input::placeholder {
         z-index: 15;
     }
     .card_number_automatic_filling {
+        width: 380px;
         position: relative;
         top: -340px;
         left: 150px;
@@ -386,6 +389,7 @@ form input::placeholder {
         letter-spacing: 0.15rem;
     }
     .card_name_automatic_filling {
+        width: 300px;
         text-transform: uppercase;
         font-size: 0.85rem;
         letter-spacing: 0.09rem;
@@ -394,6 +398,7 @@ form input::placeholder {
         left: 150px;
     }
     .card_exp_month_automatic_filling {
+        width: 60px;
         font-size: 0.85rem;
         letter-spacing: 0.09rem;
         position: relative;
@@ -407,6 +412,7 @@ form input::placeholder {
         left: 502px;
     }
     .card_exp_year_automatic_filling {
+        width: 30px;
         font-size: 0.85rem;
         letter-spacing: 0.09rem;
         position: relative;
