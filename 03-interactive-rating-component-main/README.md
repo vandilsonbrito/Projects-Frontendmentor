@@ -1,4 +1,4 @@
-# interactive Rating
+# Interactive Rating
 
 Esse aplicação é um feedback de avaliação. O usuário avalia o serviço prestado através da nota de 1 a 5 e submete essa avaliação. É um excelente exemplo para ter o feedback do usuário em relação a qualquer serviço prestado.
 
