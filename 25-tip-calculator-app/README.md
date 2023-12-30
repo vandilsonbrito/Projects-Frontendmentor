@@ -15,7 +15,7 @@ Pude praticar interação de JS com o DOM e recuperar valor de input em tempo re
   
 <h2>Exibition</h2>
 
-https://github.com/vandilsonbrito/Projects-Frontendmentor/assets/108373095/1ecdb1bc-5957-4bdf-9806-129867b70c7e
+https://github.com/vandilsonbrito/Projects-Frontendmentor/assets/108373095/2a36abf6-f524-4fe1-9c7c-5460948157c6
 
 <h2>Demo</h2>
 
